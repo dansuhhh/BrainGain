@@ -2,6 +2,7 @@ const React = require('react');
 
 const SessionActions = require('../actions/session_actions');
 const SessionStore = require('../stores/session_store');
+const ErrorStore = require('../stores/error_store');
 
 const hashHistory = require('react-router').hashHistory;
 
@@ -23,7 +24,7 @@ const SignupForm = React.createClass({
 
   handleErrorChange(){
     this.setState({
-      error: ErrorStore.errors("signup")
+      errors: ErrorStore.errors("signup")
     });
   },
 
@@ -51,6 +52,11 @@ const SignupForm = React.createClass({
     return(
       <div>
         <h4>Sign Up</h4>
+          {
+            this.state.errors.map( error => {
+              return <p>{error}</p>;
+            })
+          }
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder="Username" onChange={this.updateUsername}/>
           <input type="text" placeholder="Password" onChange={this.updatePassword}/>

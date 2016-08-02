@@ -25,7 +25,7 @@ const LoginForm = React.createClass({
 
   handleErrorChange(){
     this.setState({
-      error: ErrorStore.errors("login")
+      errors: ErrorStore.errors("login")
     });
   },
 
@@ -56,7 +56,7 @@ const LoginForm = React.createClass({
         {
           this.state.errors.map( error => {
             return <p>{error}</p>;
-          });
+          })
         }
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder="Username" onChange={this.updateUsername}/>
