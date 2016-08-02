@@ -69,7 +69,7 @@ store listeners are listed at the end.
   0. `DELETE /subjects/:id` is called.
   0. `removeSubject` is set as the success callback.
 
-### Notes API Response Actions
+### Subjects API Response Actions
 
 * `receiveAllSubjects`
   0. invoked from an API callback.
@@ -118,7 +118,7 @@ store listeners are listed at the end.
   0. `DELETE /subjects/:id/decks/:id` is called.
   0. `removeDeck` is set as the success callback.
 
-### Notebooks API Response Actions
+### Decks API Response Actions
 
 * `receiveAllDecks`
   0. invoked from an API callback.

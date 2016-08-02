@@ -68,16 +68,16 @@ the API.
 - [ ] CRUD API for subjects (`SubjectsController`)
 - [ ] jBuilder views for subjects
 - [ ] test out API interaction in the console.
-- implement each note component, building out the flux loop as needed.
+- implement each subject component, building out the flux loop as needed.
   - [ ] `SubjectIndex`
   - [ ] `SubjectIndexItem`
   - [ ] `SubjectForm`
 - [ ] style subjects components
 - [ ] seed subjects
 
-### Phase 3: Decks (2 day, W2 Tu 6pm)
+### Phase 3: Decks & Cards (2 day, W2 Tu 6pm)
 
-**Objective:** Decks belong to Subjects, and can be viewed by subject.
+**Objective:** Decks belong to Subjects, and can be viewed by subject. Cards belong to Decks, and can be viewed by deck.
 
 - [ ] create `Deck` model
 - build out API, Flux loop, and components for:
@@ -86,14 +86,6 @@ the API.
   - [ ] viewing decks by subject
 - [ ] Use CSS to style new components
 - [ ] Seed Decks
-
-Phase 3 adds organization to the cards. Cards belong to a Deck,
-which has its own `Index` view.
-
-### Phase 4: Cards (1 days, W2 W 6pm)
-
-**Objective:** Cards belong to Decks, and can be viewed by deck.
-
 - [ ] create `Card` model
 - build out API, Flux loop, and components for:
   - [ ] Card CRUD
@@ -103,11 +95,18 @@ which has its own `Index` view.
 - [ ] Use CSS to style new components
 - [ ] Seed Cards
 
-
-### Phase 5: - Flashcard flipping for Study (1 day, W2 F 6pm)
+### Phase 4: - Flashcard flipping for Study (1 day, W2 W 6pm)
 
 **objective:** Add flashcard manipulation to cards in study view
 
 - [ ] Pair flip button with question side of card and user prompt with answer side of card
 - [ ] Use CSS to achieve flashcard behavior
 - [ ] Create algorithm to show the user the progress of mastering a deck
+
+### Phase 5: Search (2 days, W2 F 6pm)
+
+**Objective:** Search will show predicted Subjects. Entering search text will show all similar Decks.
+
+- [ ] Render predicted searches with each change
+- [ ] Allow clickable on prediction dropdown
+- [ ] Render similar deck results if search bar is entered

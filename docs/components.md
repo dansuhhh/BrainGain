@@ -6,12 +6,13 @@
       * Login
       * Signup
     * Search
+    * AllSubjectIndex
     * Library
       * UserSubjectIndex
         * SubjectItem
-          * DeckIndex 
-            * DeckIndexItem
-              * DeckIndexItemForm
+          * DeckIndex
+    * DeckForm
+      * CardForm
   * Study
 
 
@@ -22,10 +23,11 @@
     * **component:** `Search` **path:** index
     * **component** `LoginForm` **path:** /login
     * **component** `SignupForm` **path:** /signup
+    * **component** `AllSubjectIndex` **path:** /subjects
     * **component:** `Library` **path:** /library
       * **component:** `UserSubjectIndex` **path:** none
         * **component:** `SubjectItem` **path:** /:subjectId
         * **component:** `DeckIndex` **path:** /:subjectId/decks
-          * **component:** `DeckIndexItem` **path:** /:deckId
-            * **component** `DeckIndexItemForm` **path:** /:deckId/edit
+    * **component** `DeckForm` **path:** /:subjectId/:deckId/edit
+      * **component** `CardForm` **path:** none
   * **component** `Study` **path** /study

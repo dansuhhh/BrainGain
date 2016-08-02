@@ -12,7 +12,6 @@ author_id   | integer   | not null, foreign key (references users), indexed
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users), indexed
 name        | string    | not null
 objective   | text      |
 
