@@ -41,7 +41,7 @@ const LoginForm = React.createClass({
     });
   },
 
-  handleSubmit(event){
+  handleSubmit(event) {
     event.preventDefault();
     SessionActions.logIn({
       username: this.state.username,
@@ -49,15 +49,17 @@ const LoginForm = React.createClass({
     });
   },
 
-  render(){
+  render() {
+    let errorList = [];
+    if (this.state.errors) {
+      errorList = this.state.errors.map( (error, index) => {
+        return <p key={index}>{error}</p>;
+      })
+    }
     return(
       <div>
         <h4>Login</h4>
-        {
-          this.state.errors.map( error => {
-            return <p>{error}</p>;
-          })
-        }
+        {errorList}
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder="Username" onChange={this.updateUsername}/>
           <input type="text" placeholder="Password" onChange={this.updatePassword}/>

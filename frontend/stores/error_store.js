@@ -9,7 +9,7 @@ let _form = "";
 
 ErrorStore.errors = form => {
   if (_form === form){
-    return _errors.slice();
+    return _errors;
   }
 };
 
