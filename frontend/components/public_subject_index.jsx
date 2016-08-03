@@ -2,7 +2,7 @@ const React = require('react');
 const SubjectStore = require('../stores/subject_store');
 const SubjectActions = require('../actions/subject_actions');
 
-const SubjectIndex = React.createClass({
+const PublicSubjectIndex = React.createClass({
   getInitialState() {
     return { subjects: [] };
   },
@@ -22,16 +22,26 @@ const SubjectIndex = React.createClass({
     let subjectList = [];
     if (this.state.subjects){
       subjectList = this.state.subjects.map( subject => {
-        return <p key={subject.id}>{subject.title}</p>;
+        return (
+          <li
+            key={subject.id}
+            className="public-subject-item">
+            {subject.title}
+          </li>
+        );
       });
     }
 
     return(
-      <ul>
-        {subjectList}
-      </ul>
+      <section className="public-subjects-section">
+        <h3>User-Created Subjects</h3>
+        <hr></hr>
+        <ul>
+          {subjectList}
+        </ul>
+      </section>
     );
   }
 });
 
-module.exports = SubjectIndex;
+module.exports = PublicSubjectIndex;

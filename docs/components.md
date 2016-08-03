@@ -6,7 +6,7 @@
       * Login
       * Signup
     * Search
-    * AllSubjectIndex
+    * PublicSubjectIndex
     * Library
       * UserSubjectIndex
         * SubjectItem
@@ -23,7 +23,7 @@
     * **component:** `Search` **path:** index
     * **component** `LoginForm` **path:** /login
     * **component** `SignupForm` **path:** /signup
-    * **component** `AllSubjectIndex` **path:** /subjects
+    * **component** `PublicSubjectIndex` **path:** /subjects
     * **component:** `Library` **path:** /library
       * **component:** `UserSubjectIndex` **path:** none
         * **component:** `SubjectItem` **path:** /:subjectId
