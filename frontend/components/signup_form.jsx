@@ -56,12 +56,20 @@ const SignupForm = React.createClass({
       })
     }
     return(
-      <div>
-        <h4>Sign Up</h4>
+      <div className="auth-form-div">
+        <h4 className="auth-header">Sign Up</h4>
         {errorList}
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Username" onChange={this.updateUsername}/>
-          <input type="text" placeholder="Password" onChange={this.updatePassword}/>
+          <input
+            className="auth-input"
+            type="text"
+            placeholder="Username"
+            onChange={this.updateUsername}/>
+          <input
+            className="auth-input"
+            type="text"
+            placeholder="Password"
+            onChange={this.updatePassword}/>
           <input type="submit"/>
         </form>
       </div>

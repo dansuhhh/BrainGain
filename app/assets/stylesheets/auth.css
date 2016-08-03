@@ -1,0 +1,27 @@
+.auth-form-div {
+  margin:auto;
+  margin-top: 145px;
+  border: solid 1px black;
+  width: 300px;
+  height: 400px;
+}
+
+.auth-form-div * {
+  margin:auto;
+  display: block;
+}
+
+.auth-form-div form {
+}
+
+.auth-form-div h4 {
+  color: #FF9147;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.auth-form-div input {
+  background-color: #F2F2F2;
+  padding: 20px;
+  width: 280px;
+}

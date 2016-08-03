@@ -57,12 +57,19 @@ const LoginForm = React.createClass({
       })
     }
     return(
-      <div>
+      <div className="auth-form-div">
         <h4>Login</h4>
         {errorList}
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Username" onChange={this.updateUsername}/>
-          <input type="text" placeholder="Password" onChange={this.updatePassword}/>
+          <input
+            type="text"
+            placeholder="Username"
+            onChange={this.updateUsername}/>
+          <input
+            type="text"
+            placeholder="Password"
+            onChange={this.updatePassword}/>
+          <hr></hr>
           <input type="submit"/>
         </form>
       </div>
