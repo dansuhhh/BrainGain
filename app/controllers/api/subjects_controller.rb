@@ -1,7 +1,8 @@
-class SubjectsController < ApplicationController
+class Api::SubjectsController < ApplicationController
 
   def index
     @subjects = Subject.all
+    render "api/subjects/index"
   end
 
   def new
@@ -10,37 +11,32 @@ class SubjectsController < ApplicationController
 
   def create
     @subject = Subject.new(subject_params)
+    @subject.author_id = current_user.id
     if @subject.save
-      render json: @subject
+      render "api/subjects/show"
     else
       render json: @subject.errors.full_messages, status: 422
     end
   end
 
-  def edit
-    @subject = Subject.find(params[:id])
-    render json: @subject
-  end
-
   def update
     @subject = Subject.find(params[:id])
-    if @subject.update!
-      render json: @subject
+    if @subject.update_attributes(subject_params)
+      render "api/subjects/show"
     else
       render json: @subject.errors.full_message, status: 422
     end
   end
 
   def show
-    render json: Subject.find(params[:id])
+    @subject = Subject.find(params[:id])
+    render "api/subjects/show"
   end
 
   def destroy
     @subject = Subject.find(params[:id])
-    if @subject.destroy!
-      redirect_to api_subjects_url
-    else
-      render json: @subject.errors.full_message, status: 404
+    @subject.destroy!
+    render "api/subjects/show"
   end
 
   private

@@ -40,7 +40,7 @@ const SessionActions = {
     AppDispatcher.dispatch({
       actionType: SessionConstants.LOGOUT
     });
-    hashHistory.push("/login");
+    hashHistory.push("/session/new");
   }
 
 };

@@ -63,18 +63,21 @@ BrainGain is a web application inspired by Brainscape that will be built using R
 **Objective:** Subjects can be created, read, and destroyed through
 the API.
 
-- [ ] create `Subject` model
-- [ ] seed the database with a small amount of test data
-- [ ] CRUD API for subjects (`SubjectsController`)
-- [ ] jBuilder views for subjects
-- [ ] test out API interaction in the console.
+- [X] create library component, only accessible if logged in, otherwise redirect to homepage
+- [ ] create navbar with auth handling buttons
+- [X] create `Subject` model
+- [X] seed the database with a small amount of test data
+- [X] CRUD API for subjects (`SubjectsController`)
+- [X] jBuilder views for subjects
+- [X] test out API interaction in the console.
 - implement each subject component, building out the flux loop as needed.
-  - [ ] `SubjectIndex`
+  - [X] `SubjectIndex`
   - [ ] `SubjectIndexItem`
   - [ ] `SubjectForm`
+- [ ] refactor to separate Subjects into Public and User's Subjects
+- [ ] error handling
 - [ ] style subjects components
-- [ ] seed subjects
-- [ ] BONUS: add image (gem paperclip) as column of subjects
+- [ ] BONUS: add image column (gem paperclip) to subjects
 
 ### Phase 3: Decks & Cards (2 day, W2 Tu 6pm)
 

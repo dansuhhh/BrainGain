@@ -1,4 +1,4 @@
-const SessionApiUtil = {
+module.exports = {
   signUp(formData, success, error){
     $.ajax({
       url: "api/users",
@@ -27,5 +27,3 @@ const SessionApiUtil = {
     });
   }
 };
-
-module.exports = SessionApiUtil;
