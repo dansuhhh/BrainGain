@@ -49,6 +49,22 @@ const LoginForm = React.createClass({
     });
   },
 
+  handleDan(event){
+    event.preventDefault();
+    SessionActions.logIn({
+      username: "danielleColeslaw",
+      password: "dandan"
+    });
+  },
+
+  handleLeen(event){
+    event.preventDefault();
+    SessionActions.logIn({
+      username: "LeanOnBeanshin",
+      password: "dandan"
+    });
+  },
+
   render() {
     let errorList = [];
     if (this.state.errors) {
@@ -73,7 +89,8 @@ const LoginForm = React.createClass({
           <input type="submit"/>
         </form>
         <Link to="/users/new">Sign Up</Link>
-        <Link to="/users/new">Sign Up</Link>
+        <a onClick={this.handleDan}>Sign In as Dan</a>
+        <a onClick={this.handleLeen}>Sign In as Leen</a>
       </div>
     );
   }
