@@ -64,7 +64,7 @@ BrainGain is a web application inspired by Brainscape that will be built using R
 the API.
 
 - [X] create library component, only accessible if logged in, otherwise redirect to homepage
-- [ ] create navbar with auth handling buttons
+- [X] create navbar with auth handling buttons
 - [X] create `Subject` model
 - [X] seed the database with a small amount of test data
 - [X] CRUD API for subjects (`SubjectsController`)
@@ -74,7 +74,7 @@ the API.
   - [X] `SubjectIndex`
   - [ ] `SubjectIndexItem`
   - [ ] `SubjectForm`
-- [ ] refactor to separate Subjects into Public and User's Subjects
+- [X] refactor to separate Subjects into Public and User's Subjects
 - [ ] error handling
 - [ ] style subjects components
 - [ ] BONUS: add image column (gem paperclip) to subjects

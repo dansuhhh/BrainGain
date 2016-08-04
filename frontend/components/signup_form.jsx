@@ -17,7 +17,7 @@ const SignupForm = React.createClass({
   },
 
   handleLoggedChange(){
-    if (SessionStore.isUserLoggedIn){
+    if (SessionStore.isUserLoggedIn()){
       hashHistory.push("/");
     }
   },

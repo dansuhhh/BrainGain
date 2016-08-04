@@ -1,8 +1,8 @@
 const AppDispatcher = require('../dispatcher/dispatcher');
+const SessionStore = require('./session_store');
 const Store = require('flux/utils').Store;
 const SubjectConstants = require('../constants/subject_constants');
 const SubjectStore = new Store(AppDispatcher);
-
 
 let _subjects = {};
 
@@ -10,6 +10,17 @@ SubjectStore.all = () => {
   let subjects = [];
   Object.keys(_subjects).forEach( key => {
     subjects.push(_subjects[key]);
+  });
+  return subjects;
+};
+
+SubjectStore.subscribed = () => {
+  let subjects = [];
+  let currentUserId = SessionStore.currentUser().id
+  Object.keys(_subjects).forEach( key => {
+    if (_subjects[key].author_id === currentUserId){
+      subjects.push(_subjects[key]);
+    }
   });
   return subjects;
 };

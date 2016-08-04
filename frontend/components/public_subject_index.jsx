@@ -8,8 +8,12 @@ const PublicSubjectIndex = React.createClass({
   },
 
   componentDidMount() {
-    SubjectStore.addListener(this.handleChange);
+    this.subjectListener = SubjectStore.addListener(this.handleChange);
     SubjectActions.fetchAllSubjects();
+  },
+
+  componentWillUnmount() {
+    this.subjectListener.remove();
   },
 
   handleChange(){

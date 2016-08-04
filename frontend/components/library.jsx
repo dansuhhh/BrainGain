@@ -1,10 +1,15 @@
 const React = require('react');
 const Navbar = require('./navbar');
+const UserSubjectIndex = require('./user_subject_index');
 
 const Library = React.createClass({
   render(){
     return(
-      <h1>Library</h1>
+      <main className="library">
+        <Navbar/>
+        <UserSubjectIndex/>
+        {this.props.children}
+      </main>
 
     );
   }

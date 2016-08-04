@@ -23,7 +23,8 @@ module.exports = {
     $.ajax({
       url: "api/session",
       type: "DELETE",
-      success
+      success: success
     });
   }
+
 };
