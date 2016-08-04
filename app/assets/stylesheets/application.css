@@ -14,7 +14,8 @@
  *= require_self
  */
 
- body, aside, figure, nav, a, img, div, form, h4, input {
+ body, header, section, aside, figure, nav, a, img, div, form, h4,
+ aside, main, input {
    margin: 0;
    padding: 0;
  }
@@ -22,4 +23,6 @@
  body {
    background-color: #F2F2F2;
    font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   font-weight: 400;
  }

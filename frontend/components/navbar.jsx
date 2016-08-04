@@ -4,7 +4,6 @@ const SessionActions = require('../actions/session_actions');
 const Link = require('react-router').Link;
 const LoginForm = require('./login_form');
 
-
 const Navbar = React.createClass({
   getInitialState() {
     return { user: SessionStore.currentUser() };
@@ -45,12 +44,12 @@ const Navbar = React.createClass({
           My Library
         </Link>;
       logOutButton =
-        <button
+        <a
           className="navbar-logout"
           onClick={this.handleLogOutClick}>
           Log Out
-        </button>;
-      greet = <h3>{this.state.user.username}</h3>;
+        </a>;
+      greet = <h3 className="navbar-greet">{this.state.user.username}</h3>;
     }
     return(
       <nav className="main-nav-bar">

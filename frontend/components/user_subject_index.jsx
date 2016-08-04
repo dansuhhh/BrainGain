@@ -38,8 +38,7 @@ const UserSubjectIndex = React.createClass({
     return (
       <aside className="user-subject-index">
         <header className="subject-index-header">
-          <h1>Subjects</h1>
-
+          <h3>Subjects</h3>
         </header>
         <ul className="user-subject-list">
           {userSubjects}

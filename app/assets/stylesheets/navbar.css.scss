@@ -3,7 +3,8 @@
   height: 50px;
   background-color: #2F2F2F;
   border-bottom: solid 5px #FF8A47;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 45px 5px 45px;
+  box-shadow: 0 3px 5px #CBCBCB;
 }
 
 .brain-image {
@@ -24,4 +25,20 @@
 
 .navbar-link:hover {
   color: #55B7E3;
+}
+
+.navbar-logout {
+  background-color: #55B7E3;
+  color: white;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  float: right;
+  border-radius: 3px;
+  line-height: 27px;
+  margin-top: 9px;
+}
+
+.navbar-greet {
+  text-align: right;
 }

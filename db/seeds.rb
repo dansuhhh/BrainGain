@@ -29,7 +29,22 @@ subjects = [
   "Wine",
   "LSAT",
   "AppAcademy",
-  "NYC"
+  "NYC", #14th
+  "Astronomy",
+  "Calculus",
+  "MCAT",
+  "SAT",
+  "Pokemon",
+  "The Halal Guys",
+  "HTML",
+  "The Cold War",
+  "Psychology",
+  "Algebra",
+  "Periodic Table",
+  "Bible",
+  "Geography",
+  "Hollywood Celebrities",
+  "NBA" #29th
 ]
 subjects.each_with_index do |subject, index|
   subject_seed = Subject.new({ title: subject, author_id: index % 7 + 1 })
