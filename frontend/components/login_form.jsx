@@ -5,7 +5,7 @@ const SessionStore = require('../stores/session_store');
 const ErrorStore = require('../stores/error_store');
 
 const hashHistory = require('react-router').hashHistory;
-
+const Link = require('react-router').Link;
 
 const LoginForm = React.createClass({
   getInitialState(){
@@ -72,6 +72,8 @@ const LoginForm = React.createClass({
           <hr></hr>
           <input type="submit"/>
         </form>
+        <Link to="/users/new">Sign Up</Link>
+        <Link to="/users/new">Sign Up</Link>
       </div>
     );
   }
