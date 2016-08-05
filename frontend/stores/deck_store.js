@@ -40,6 +40,11 @@ _decks[deck.id] = deck;
   DeckStore.__emitChange();
 };
 
+DeckStore.removeDeck = deck => {
+  delete _decks[parseInt(deck.id)];
+  DeckStore.__emitChange();
+};
+
 DeckStore.__onDispatch = payload => {
   switch(payload.actionType) {
     case (DeckConstants.DECKS_RECEIVED):
@@ -47,6 +52,9 @@ DeckStore.__onDispatch = payload => {
       break;
     case (DeckConstants.DECK_RECEIVED):
       DeckStore.setDeck(payload.deck);
+      break;
+    case (DeckConstants.DECK_REMOVED):
+      DeckStore.removeDeck(payload.deck);
       break;
   }
 };

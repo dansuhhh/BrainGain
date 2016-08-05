@@ -3,7 +3,7 @@ const LibraryDeckIndex = require('./library_deck_index');
 const SubjectActions = require('../actions/subject_actions');
 const SubjectStore = require('../stores/subject_store');
 
-const UserSubjectIndexItem = React.createClass({
+const UserSubjectDetail = React.createClass({
   handleDelete(event){
     event.preventDefault();
     SubjectActions.removeSubject(this.props.params.subjectId);
@@ -13,11 +13,11 @@ const UserSubjectIndexItem = React.createClass({
     return(
       <section className="section-subject-detail">
         <h1>{this.props.params.subjectId}</h1>
-        <a onClick={this.handleDelete}>Delete</a>
+        <a onClick={this.handleDelete}>Delete Subject</a>
         <LibraryDeckIndex subjectId={this.props.params.subjectId}/>
       </section>
     );
   }
 });
 
-module.exports = UserSubjectIndexItem;
+module.exports = UserSubjectDetail;

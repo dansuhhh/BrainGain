@@ -20,7 +20,7 @@ const DeckActions = {
   },
 
   removeDeck(id){
-    DeckApiUtil.removeDeck(id, DeckActions.receiveDeck);
+    DeckApiUtil.removeDeck(id, DeckActions.deleteDeck);
   },
 
   receiveAllDecks(decks){
@@ -33,6 +33,13 @@ const DeckActions = {
   receiveDeck(deck){
     AppDispatcher.dispatch({
       actionType: DeckConstants.DECK_RECEIVED,
+      deck: deck
+    });
+  },
+
+  deleteDeck(deck){
+    AppDispatcher.dispatch({
+      actionType: DeckConstants.DECK_REMOVED,
       deck: deck
     });
   },

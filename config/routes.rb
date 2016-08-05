@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resources :subjects, except: [:new, :edit]
     resources :decks, except: [:new, :edit]
+    resources :cards, except: [:new, :edit]
   end
 
 

@@ -33,15 +33,21 @@ const LibraryDeckIndex = React.createClass({
     let subjectDecks;
     if (this.state.decks) {
       subjectDecks = this.state.decks.map( deck => {
-        return <p key={deck.id}>{deck.title}</p>;
+        return (<tr key={deck.id}>
+              {deck.title}
+          </tr>);
       });
     }
 
     return(
-      <div>
-        <h2>Decks</h2>
-        {subjectDecks}
-      </div>
+      <article className="subject-deck-index">
+        <table className="subject-deck-table">
+          <thead>Decks</thead>
+          <tbody>
+            {subjectDecks}
+          </tbody>
+        </table>
+      </article>
     );
   }
 });

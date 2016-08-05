@@ -12,4 +12,10 @@ class Subject < ActiveRecord::Base
     :decks,
     dependent: :destroy
   )
+
+  has_many(
+    :cards,
+    through: :decks,
+    source: :cards
+  )
 end

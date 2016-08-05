@@ -7,13 +7,14 @@
 
 BrainGain is a web application inspired by Brainscape that will be built using Ruby on Rails and React.js.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria:
 
-- [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
+- [X] Hosting on Heroku
+- [X] New account creation, login, and guest/demo login
 - [ ] A production README, replacing this README
 - [ ] Subjects
-  - [ ] Create and delete personal subjects
+  - [X] Create and delete personal subjects
   - [ ] View and add other subjects to personal library
-  - [ ] Navigate through added subjects to view decks and cards
+  - [X] Navigate through added subjects to view decks and cards
+  - [ ] Upload personal image as subject avatar
 - [ ] Decks
   - [ ] Create, edit, and delete decks
   - [ ] Create, edit, and delete cards within decks
@@ -73,10 +74,11 @@ the API.
 - implement each subject component, building out the flux loop as needed.
   - [X] `SubjectIndex`
   - [X] `SubjectIndexItem`
-  - [ ] `SubjectForm`
+  - [X] `SubjectForm`
 - [X] refactor to separate Subjects into Public and User's Subjects
 - [ ] error handling
 - [ ] style subjects components
+- [ ] implement image upload for subject avatar
 - [ ] BONUS: add image column (gem paperclip) to subjects
 
 ### Phase 3: Decks & Cards (2 day, W2 Tu 6pm)

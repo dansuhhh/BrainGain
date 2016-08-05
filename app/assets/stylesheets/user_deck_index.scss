@@ -1,0 +1,20 @@
+.subject-deck-index {
+
+}
+
+.subject-deck-table {
+  width: 100%;
+  thead {
+    border-bottom: 1px solid black;
+    height: 40px;
+  }
+  tr {
+    background-color: white;
+    height: 60px;
+
+  }
+  tr:nth-child(odd) {
+    background-color: #F9F9F9;
+  }
+
+}

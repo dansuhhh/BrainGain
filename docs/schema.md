@@ -14,6 +14,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 name        | string    | not null
 objective   | text      |
+subject_id  | integer   | not null
 
 ## cards
 column name | data type | details
