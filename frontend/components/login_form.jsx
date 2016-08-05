@@ -82,7 +82,7 @@ const LoginForm = React.createClass({
             placeholder="Username"
             onChange={this.updateUsername}/>
           <input
-            type="text"
+            type="password"
             placeholder="Password"
             onChange={this.updatePassword}/>
           <hr></hr>

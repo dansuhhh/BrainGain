@@ -5,10 +5,6 @@ class Api::SubjectsController < ApplicationController
     render "api/subjects/index"
   end
 
-  def new
-
-  end
-
   def create
     @subject = Subject.new(subject_params)
     @subject.author_id = current_user.id

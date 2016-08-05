@@ -67,7 +67,7 @@ const SignupForm = React.createClass({
             onChange={this.updateUsername}/>
           <input
             className="auth-input"
-            type="text"
+            type="password"
             placeholder="Password"
             onChange={this.updatePassword}/>
           <input type="submit"/>

@@ -10,6 +10,7 @@ const Library = require('./components/library');
 const PublicSubjectIndex = require('./components/public_subject_index');
 const Main = require('./components/main');
 const UserSubjectIndexItem = require('./components/user_subject_index_item');
+window.u = require('./util/deck_api_util');
 
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
 

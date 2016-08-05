@@ -1,0 +1,4 @@
+module.exports = {
+  DECKS_RECEIVED : "DECKS_RECEIVED",
+  DECK_RECEIVED : "DECK_RECEIVED"
+}
