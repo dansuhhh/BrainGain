@@ -1,11 +1,12 @@
 const React = require('react');
 const SubjectStore = require('../stores/subject_store');
 const SubjectActions = require('../actions/subject_actions');
+const SubjectForm = require('./subject_form');
 const Link = require('react-router').Link;
 
 const UserSubjectIndex = React.createClass({
   getInitialState(){
-    return { subjects : [] };
+    return { subjects: [] };
   },
 
   componentDidMount(){
@@ -39,8 +40,8 @@ const UserSubjectIndex = React.createClass({
       <aside className="user-subject-index">
         <header className="subject-index-header">
           <h3>Subjects</h3>
-          <a>Create</a>
         </header>
+        <SubjectForm />
         <ul className="user-subject-list">
           {userSubjects}
         </ul>

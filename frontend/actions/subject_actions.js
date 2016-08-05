@@ -20,7 +20,7 @@ const SubjectActions = {
   },
 
   removeSubject(id){
-    SubjectApiUtil.removeSubject(id, SubjectActions.receiveSubject);
+    SubjectApiUtil.removeSubject(id, SubjectActions.deleteSubject);
   },
 
   receiveAllSubjects(subjects){
@@ -33,6 +33,13 @@ const SubjectActions = {
   receiveSubject(subject){
     AppDispatcher.dispatch({
       actionType: SubjectConstants.SUBJECT_RECEIVED,
+      subject: subject
+    });
+  },
+
+  deleteSubject(subject){
+    AppDispatcher.dispatch({
+      actionType: SubjectConstants.SUBJECT_REMOVED,
       subject: subject
     });
   },

@@ -42,6 +42,11 @@ SubjectStore.setSubject = subject => {
   SubjectStore.__emitChange();
 };
 
+SubjectStore.removeSubject = subject => {
+  delete _subjects[parseInt(subject.id)];
+  SubjectStore.__emitChange();
+};
+
 SubjectStore.__onDispatch = payload => {
   switch(payload.actionType) {
     case (SubjectConstants.SUBJECTS_RECEIVED):
@@ -49,6 +54,9 @@ SubjectStore.__onDispatch = payload => {
       break;
     case (SubjectConstants.SUBJECT_RECEIVED):
       SubjectStore.setSubject(payload.subject);
+      break;
+    case (SubjectConstants.SUBJECT_REMOVED):
+      SubjectStore.removeSubject(payload.subject);
       break;
   }
 };

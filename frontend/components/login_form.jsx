@@ -74,7 +74,7 @@ const LoginForm = React.createClass({
     }
     return(
       <div className="auth-form-div">
-        <h4>Login</h4>
+        <h2>Login</h2>
         {errorList}
         <form onSubmit={this.handleSubmit}>
           <input
@@ -86,11 +86,11 @@ const LoginForm = React.createClass({
             placeholder="Password"
             onChange={this.updatePassword}/>
           <hr></hr>
-          <input type="submit"/>
+          <input type="submit" value="Log In"/>
         </form>
         <Link to="/users/new">Sign Up</Link>
-        <a onClick={this.handleDan}>Sign In as Dan</a>
-        <a onClick={this.handleLeen}>Sign In as Leen</a>
+        <a onClick={this.handleDan}>Log In as Dan</a>
+        <a onClick={this.handleLeen}>Log In as Leen</a>
       </div>
     );
   }

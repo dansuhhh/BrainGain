@@ -72,7 +72,7 @@ the API.
 - [X] test out API interaction in the console.
 - implement each subject component, building out the flux loop as needed.
   - [X] `SubjectIndex`
-  - [ ] `SubjectIndexItem`
+  - [X] `SubjectIndexItem`
   - [ ] `SubjectForm`
 - [X] refactor to separate Subjects into Public and User's Subjects
 - [ ] error handling
@@ -83,13 +83,13 @@ the API.
 
 **Objective:** Decks belong to Subjects, and can be viewed by subject. Cards belong to Decks, and can be viewed by deck.
 
-- [ ] create `Deck` model
+- [X] create `Deck` model
 - build out API, Flux loop, and components for:
-  - [ ] Deck CRUD
-  - [ ] adding decks requires a subject
-  - [ ] viewing decks by subject
+  - [X] Deck CRUD
+  - [X] adding decks requires a subject
+  - [X] viewing decks by subject
 - [ ] Use CSS to style new components
-- [ ] Seed Decks
+- [X] Seed Decks
 - [ ] create `Card` model
 - build out API, Flux loop, and components for:
   - [ ] Card CRUD
