@@ -10,6 +10,7 @@ const Library = require('./components/library');
 const PublicSubjectIndex = require('./components/public_subject_index');
 const Main = require('./components/main');
 const UserSubjectDetail = require('./components/user_subject_detail');
+const DeckEditForm = require('./components/deck_edit_form');
 
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
 
@@ -26,6 +27,7 @@ const routes = (
     <Route path="session/new" component={ LoginForm }/>
     <Route path="library" component={ Library } onEnter={ _ensureLoggedIn }>
       <Route path=":subjectId" component={ UserSubjectDetail } />
+    <Route path="decks/:deckId" component={ DeckEditForm } />
     </Route>
   </Route>
 );

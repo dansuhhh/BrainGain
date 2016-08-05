@@ -6,7 +6,6 @@ const Library = React.createClass({
   render(){
     return(
       <main className="library">
-        <Navbar/>
         <UserSubjectIndex/>
         {this.props.children}
       </main>

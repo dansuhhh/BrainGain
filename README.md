@@ -92,11 +92,11 @@ the API.
   - [X] viewing decks by subject
 - [ ] Use CSS to style new components
 - [X] Seed Decks
-- [ ] create `Card` model
+- [X] create `Card` model
 - build out API, Flux loop, and components for:
-  - [ ] Card CRUD
-  - [ ] adding cards requires a deck
-  - [ ] editing cards requires a deck
+  - [X] Card CRUD
+  - [X] adding cards requires a deck
+  - [X] editing cards requires a deck
   - [ ] viewing cards by deck
 - [ ] Use CSS to style new components
 - [ ] Seed Cards

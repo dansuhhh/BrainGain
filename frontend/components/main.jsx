@@ -7,7 +7,6 @@ const Main = React.createClass({
   render() {
     return (
       <div>
-        <Navbar/>
         <Search/>
         <PublicSubjectIndex/>
       </div>

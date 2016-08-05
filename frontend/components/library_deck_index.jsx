@@ -29,15 +29,22 @@ const LibraryDeckIndex = React.createClass({
     });
   },
 
+  handleEditDeck(event){
+    event.preventDefault();
+    
+  },
+
   render(){
     let subjectDecks;
     if (this.state.decks) {
       subjectDecks = this.state.decks.map( deck => {
         return (<tr key={deck.id}>
               {deck.title}
+              <a onClick={this.handleEditDeck}>Edit</a>
           </tr>);
       });
     }
+
 
     return(
       <article className="subject-deck-index">
