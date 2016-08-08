@@ -91,6 +91,7 @@ const LoginForm = React.createClass({
         <Link to="/users/new">Sign Up</Link>
         <a onClick={this.handleDan}>Log In as Dan</a>
         <a onClick={this.handleLeen}>Log In as Leen</a>
+
       </div>
     );
   }

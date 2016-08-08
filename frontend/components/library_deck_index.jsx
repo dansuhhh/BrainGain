@@ -1,7 +1,7 @@
 const React = require ('react');
 const DeckStore = require('../stores/deck_store');
 const DeckActions = require('../actions/deck_actions');
-
+const hashHistory = require('react-router').hashHistory;
 
 const LibraryDeckIndex = React.createClass({
   getInitialState(){
@@ -29,9 +29,10 @@ const LibraryDeckIndex = React.createClass({
     });
   },
 
-  handleEditDeck(event){
+  handleEditDeck(deckId, event){
+    debugger
     event.preventDefault();
-    
+    hashHistory.push(`decks/${deckId}`);
   },
 
   render(){
@@ -39,8 +40,8 @@ const LibraryDeckIndex = React.createClass({
     if (this.state.decks) {
       subjectDecks = this.state.decks.map( deck => {
         return (<tr key={deck.id}>
-              {deck.title}
-              <a onClick={this.handleEditDeck}>Edit</a>
+              <td>{deck.title}</td>
+              <td><a onClick={this.handleEditDeck.bind(null, deck.id)}>Edit</a></td>
           </tr>);
       });
     }

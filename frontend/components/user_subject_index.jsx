@@ -29,7 +29,8 @@ const UserSubjectIndex = React.createClass({
     if (this.state.subjects){
       userSubjects = this.state.subjects.map( subject => {
         return (
-          <li className="user-subject-list-item" key={subject.id}>
+          <li className="group user-subject-list-item" key={subject.id}>
+            <a className="index-subject-thumb"><img src={`${subject.image_url}`}/></a>
             <Link to={`/library/${subject.id}`}>
               {subject.title}
             </Link>

@@ -13,15 +13,15 @@ CardStore.all = () => {
   return cards;
 };
 
-// CardStore.allOfSubject = (subjectId) => {
-//   let cards = [];
-//   Object.keys(_cards).forEach( key => {
-//     if (_cards[key].subject_id === parseInt(subjectId)){
-//       cards.push(_cards[key]);
-//     }
-//   });
-//   return cards;
-// };
+CardStore.allOfDeck = (deckId) => {
+  let cards = [];
+  Object.keys(_cards).forEach( key => {
+    if (_cards[key].deck_id === parseInt(deckId)){
+      cards.push(_cards[key]);
+    }
+  });
+  return cards;
+};
 
 CardStore.find = (id) => {
   return _cards[id];

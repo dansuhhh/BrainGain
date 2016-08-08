@@ -18,6 +18,15 @@
  aside, main, input {
    margin: 0;
    padding: 0;
+   border: 0;
+
+   font: inherit;
+   color: inherit;
+   text-align: inherit;
+   text-decoration: inherit;
+
+   background-color: transparent;
+
    box-sizing: border-box;
  }
 
@@ -25,4 +34,16 @@
    background-color: #F2F2F2;
    font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-weight: 400;
+ }
+
+ img {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+
+ .group {
+   content: "";
+   display: block;
+   clear: both
  }

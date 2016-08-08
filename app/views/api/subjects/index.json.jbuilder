@@ -1,3 +1,7 @@
 json.array! @subjects do |subject|
-  json.extract! subject, :id, :title, :author_id
+  json.id subject.id
+  json.title subject.title
+  json.author_id subject.author_id
+  json.image subject.image
+  json.image_url asset_path(subject.image.url(:original))
 end

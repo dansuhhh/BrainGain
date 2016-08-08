@@ -27,8 +27,8 @@ const routes = (
     <Route path="session/new" component={ LoginForm }/>
     <Route path="library" component={ Library } onEnter={ _ensureLoggedIn }>
       <Route path=":subjectId" component={ UserSubjectDetail } />
-    <Route path="decks/:deckId" component={ DeckEditForm } />
     </Route>
+    <Route path="decks/:deckId" component={ DeckEditForm } />
   </Route>
 );
 

@@ -37,7 +37,7 @@ class Api::SubjectsController < ApplicationController
 
   private
   def subject_params
-    params.require(:subject).permit(:title)
+    params.require(:subject).permit(:title, :image)
   end
 
 end

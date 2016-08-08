@@ -52,7 +52,7 @@ const Navbar = React.createClass({
       greet = <h3 className="navbar-greet">{this.state.user.username}</h3>;
     }
     return(
-      <nav className="main-nav-bar">
+      <nav className="group main-nav-bar">
         <a href="#" className="brain-image"></a>
         {libraryTag}
         <a href="#" className="navbar-link">FlashCards</a>

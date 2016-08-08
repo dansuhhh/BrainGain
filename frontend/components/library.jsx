@@ -5,7 +5,7 @@ const UserSubjectIndex = require('./user_subject_index');
 const Library = React.createClass({
   render(){
     return(
-      <main className="library">
+      <main className="group library">
         <UserSubjectIndex/>
         {this.props.children}
       </main>

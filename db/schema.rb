@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805194135) do
+ActiveRecord::Schema.define(version: 20160808170005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,10 +37,14 @@ ActiveRecord::Schema.define(version: 20160805194135) do
   add_index "decks", ["subject_id"], name: "index_decks_on_subject_id", using: :btree
 
   create_table "subjects", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.integer  "author_id",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",              null: false
+    t.integer  "author_id",          null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "subjects", ["author_id"], name: "index_subjects_on_author_id", using: :btree

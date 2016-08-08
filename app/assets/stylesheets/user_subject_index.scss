@@ -13,7 +13,6 @@
   height: 60px;
   padding: 15px;
   h3 {
-    line-height: 1px;
     font-weight: 300;
   }
 }
@@ -22,14 +21,21 @@
   list-style: none;
   border-right: 3px solid #E8E8E8;
   background-color: #F2F2F2;
+  color: #28B5DC;
 }
 
 .user-subject-list-item {
-  height: 30px;
-  width: 100%;
   border-bottom: 1px solid #E8E8E8;
+  padding: 20px;
+}
+
+.index-subject-thumb {
+  width: 50px;
+  margin-right: 10px;
 }
 
 .user-subject-list-item a {
   text-decoration: none;
+  float: left;
+
 }
