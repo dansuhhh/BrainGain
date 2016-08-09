@@ -42,8 +42,7 @@ const SubjectActions = {
       actionType: SubjectConstants.SUBJECT_REMOVED,
       subject: subject
     });
-  },
-
+  }
 
 };
 

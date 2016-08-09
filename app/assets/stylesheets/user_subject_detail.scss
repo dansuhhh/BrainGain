@@ -9,8 +9,9 @@
 .subject-info {
   border-bottom: 1px solid #E8E8E8;
   padding-bottom: 30px;
-  h1 {
+  input {
     color: #FF8A4C;
+    font-size: 28px;
   }
   .subject-avatar {
     width: 100px;
@@ -40,8 +41,10 @@
       }
   }
   .delete-button {
-    text-align: right;
+    float: right;
     background-color: #31B0D5;
+    border-radius: 3px;
+    padding: 5px;
     color: white;
     cursor: pointer;
   }

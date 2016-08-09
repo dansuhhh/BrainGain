@@ -6,7 +6,7 @@ const Link = require('react-router').Link;
 
 const UserSubjectIndex = React.createClass({
   getInitialState(){
-    return { subjects: [] };
+    return { subjects: SubjectStore.subscribed() };
   },
 
   componentDidMount(){

@@ -21,11 +21,9 @@ module.exports = {
     $.ajax({
       url: `api/subjects/${formData.id}`,
       type: "PATCH",
+      dataType: 'json',
       data: {
-        subject: {
-          title: `${formData.title}`,
-          image: `${formData.image}`
-        }
+        subject: { title: formData.title }
       },
       success: success
     });

@@ -73,10 +73,23 @@ const UserSubjectDetail = React.createClass({
     }
   },
 
+  updateTitle(event){
+    SubjectActions.updateSubject({
+      id: this.props.params.subjectId,
+      title: this.state.title
+    });
+  },
+
+  titleChange(event){
+    this.setState({
+      title: event.target.value
+    });
+  },
+
   render() {
     let title;
     if (this.state.title) {
-      title = <h1>{this.state.title}</h1>;
+      title = <input onChange={this.titleChange} onBlur={this.updateTitle} value={this.state.title} />;
     }
 
     return(

@@ -31,9 +31,8 @@ const DeckEditForm = React.createClass({
     return(
       <article>
         <table className="deck-edit-table">
-          {tableHeader}
+          <thead>Flashcards inside { `${DeckStore.find(parseInt(this.props.params.deckId)).title}`}</thead>
           <tbody>
-            {subjectDecks}
           </tbody>
         </table>
       </article>

@@ -14,10 +14,10 @@ BrainGain is a web application inspired by Brainscape that will be built using R
   - [X] Create and delete personal subjects
   - [ ] View and add other subjects to personal library
   - [X] Navigate through added subjects to view decks and cards
-  - [ ] Upload personal image as subject avatar
+  - [X] Upload personal image as subject avatar
 - [ ] Decks
   - [ ] Create, edit, and delete decks
-  - [ ] Create, edit, and delete cards within decks
+  - [ ] Create, edit, and delete cards within deck edit
   - [ ] View user's learning progress
 - [ ] Study mode
   - [ ] Recursively iterate through cards until deck is fully mastered
@@ -78,7 +78,7 @@ the API.
 - [X] refactor to separate Subjects into Public and User's Subjects
 - [ ] error handling
 - [ ] style subjects components
-- [ ] implement image upload for subject avatar
+- [X] implement image upload for subject avatar
 - [ ] BONUS: add image column (gem paperclip) to subjects
 
 ### Phase 3: Decks & Cards (2 day, W2 Tu 6pm)

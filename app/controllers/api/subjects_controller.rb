@@ -17,7 +17,7 @@ class Api::SubjectsController < ApplicationController
 
   def update
     @subject = Subject.find(params[:id])
-    if @subject.update_attributes(subject_params)
+    if @subject.update(subject_params)
       render "api/subjects/show"
     else
       render json: @subject.errors.full_message, status: 422
