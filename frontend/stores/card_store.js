@@ -14,10 +14,10 @@ CardStore.all = () => {
 };
 
 CardStore.allOfDeck = (deckId) => {
-  let cards = [];
+  let cards = {};
   Object.keys(_cards).forEach( key => {
     if (_cards[key].deck_id === parseInt(deckId)){
-      cards.push(_cards[key]);
+      cards[key] = _cards[key];
     }
   });
   return cards;
@@ -30,7 +30,7 @@ CardStore.find = (id) => {
 CardStore.resetCards = cards => {
 _cards = {};
   cards.forEach( card => {
-  _cards[card.id] = card;
+    _cards[card.id] = card;
   });
   CardStore.__emitChange();
 };

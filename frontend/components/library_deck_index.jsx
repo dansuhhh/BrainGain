@@ -29,27 +29,42 @@ const LibraryDeckIndex = React.createClass({
     });
   },
 
-  handleEditDeck(deckId, event){
-    event.preventDefault();
+  editDeck(deckId, event){
     hashHistory.push(`decks/${deckId}`);
+  },
+
+  deleteDeck(deckId, event) {
+    DeckActions.removeDeck(deckId);
   },
 
   render(){
     let subjectDecks;
-    if (this.state.decks) {
+    if (this.state.decks.length > 0) {
       subjectDecks = this.state.decks.map( deck => {
         return (<tr key={deck.id}>
               <td>{deck.title}</td>
-              <td><a onClick={this.handleEditDeck.bind(null, deck.id)}>Edit</a></td>
+              <td>
+                <a onClick={this.editDeck.bind(null, deck.id)}>
+                  Edit
+                </a>
+              </td>
+              <td>
+                <a onClick={this.deleteDeck.bind(null, deck.id)}>
+                  Delete
+                </a>
+              </td>
           </tr>);
       });
     }
 
-
     return(
       <article className="subject-deck-index">
         <table className="subject-deck-table">
-          <thead>Decks</thead>
+          <thead>
+            <tr><th>
+              Decks
+            </th></tr>
+          </thead>
           <tbody>
             {subjectDecks}
           </tbody>

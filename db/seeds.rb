@@ -21,6 +21,7 @@
 # end
 #
 # puts "There are now #{Transaction.count} rows in the transactions table"
+
 User.destroy_all
 Subject.destroy_all
 Deck.destroy_all
@@ -90,7 +91,7 @@ Deck.create!({                          # id : 1
     deck_id: 1
   })
   Card.create!({
-    question: "What is a line??",
+    question: "What is a line?",
     answer: "A straight path passing through at least two points",
     deck_id: 1
   })
@@ -394,20 +395,80 @@ Deck.create!({
   description: "Groups of matter",
   subject_id: 4
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 4
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 16
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 16
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 16
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 4
   })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 17
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 17
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 17
+  })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 4
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 18
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 18
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 18
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 4
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 19
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 19
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 19
   })
 # "Ruby on Rails",
 Deck.create!({                          # id : 20
@@ -435,20 +496,80 @@ Deck.create!({
   description: "Groups of matter",
   subject_id: 5
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 5
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 21
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 21
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 21
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 5
   })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 22
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 22
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 22
+  })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 5
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 23
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 23
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 23
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 5
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 24
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 24
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 24
   })
 # "US History",
 Deck.create!({                          # id : 25
@@ -456,25 +577,100 @@ Deck.create!({                          # id : 25
   description: "Groups of matter",
   subject_id: 6
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 6
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 25
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 25
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 25
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 6
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 6
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 26
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 26
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 26
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 6
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 27
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 27
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 27
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 6
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 28
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 28
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 28
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 6
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 29
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 29
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 29
   })
 # "Human Anatomy",
 Deck.create!({                          # id : 30
@@ -482,25 +678,100 @@ Deck.create!({                          # id : 30
   description: "Groups of matter",
   subject_id: 7
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 7
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 30
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 30
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 30
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 7
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 7
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 31
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 31
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 31
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 7
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 32
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 32
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 32
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 7
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 33
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 33
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 33
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 7
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 34
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 34
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 34
   })
 # "Spanish",
 Deck.create!({                          # id : 35
@@ -508,25 +779,100 @@ Deck.create!({                          # id : 35
   description: "Groups of matter",
   subject_id: 8
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 8
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 35
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 35
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 35
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 8
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 8
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 36
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 36
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 36
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 8
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 8
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 8
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Korean",
 Deck.create!({                          # id : 40
@@ -534,25 +880,100 @@ Deck.create!({                          # id : 40
   description: "Groups of matter",
   subject_id: 9
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 9
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 9
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 9
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 9
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 9
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 9
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Shakespeare",
 Deck.create!({                          # id : 45
@@ -560,25 +981,100 @@ Deck.create!({                          # id : 45
   description: "Groups of matter",
   subject_id: 10
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 10
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 10
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 10
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Wine",
 Deck.create!({                          # id : 50
@@ -586,25 +1082,100 @@ Deck.create!({                          # id : 50
   description: "Groups of matter",
   subject_id: 11
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 11
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 11
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 11
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 11
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 11
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 11
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "LSAT",
 Deck.create!({                          # id : 55
@@ -612,25 +1183,100 @@ Deck.create!({                          # id : 55
   description: "Groups of matter",
   subject_id: 12
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 12
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 12
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 12
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 12
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 12
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 12
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "AppAcademy",
 Deck.create!({                          # id : 60
@@ -638,25 +1284,100 @@ Deck.create!({                          # id : 60
   description: "Groups of matter",
   subject_id: 13
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 13
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 13
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 13
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 13
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 13
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 13
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "NYC",
 Deck.create!({                          # id : 65
@@ -664,25 +1385,100 @@ Deck.create!({                          # id : 65
   description: "Groups of matter",
   subject_id: 14
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 14
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 14
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 14
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 14
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 14
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 14
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Astronomy",
 Deck.create!({                          # id : 70
@@ -690,25 +1486,100 @@ Deck.create!({                          # id : 70
   description: "Groups of matter",
   subject_id: 15
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 15
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 15
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 15
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 15
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 15
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 15
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Calculus",
 Deck.create!({                          # id : 75
@@ -716,25 +1587,100 @@ Deck.create!({                          # id : 75
   description: "Groups of matter",
   subject_id: 16
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 16
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 16
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 16
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 16
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 16
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 16
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "MCAT",
 Deck.create!({                          # id : 80
@@ -742,25 +1688,100 @@ Deck.create!({                          # id : 80
   description: "Groups of matter",
   subject_id: 17
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 17
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 17
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 17
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 17
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 17
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 17
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "SAT",
 Deck.create!({                          # id : 85
@@ -768,25 +1789,100 @@ Deck.create!({                          # id : 85
   description: "Groups of matter",
   subject_id: 18
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 18
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 18
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 18
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 18
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 18
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 18
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Pokemon",
 Deck.create!({                            # id : 90
@@ -794,25 +1890,100 @@ Deck.create!({                            # id : 90
   description: "Groups of matter",
   subject_id: 19
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 19
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 19
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 19
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 19
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 19
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 19
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "The Halal Guys",
 Deck.create!({                           # id : 95
@@ -820,25 +1991,100 @@ Deck.create!({                           # id : 95
   description: "Groups of matter",
   subject_id: 20
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 20
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 20
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 20
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 20
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 20
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 20
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "HTML",
 Deck.create!({                          # id : 100
@@ -846,25 +2092,100 @@ Deck.create!({                          # id : 100
   description: "Groups of matter",
   subject_id: 21
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 21
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 21
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 21
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 21
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 21
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 21
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "The Cold War",
 Deck.create!({                          # id : 105
@@ -872,25 +2193,100 @@ Deck.create!({                          # id : 105
   description: "Groups of matter",
   subject_id: 22
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 22
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 22
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 22
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 22
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 22
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 22
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Psychology",
 Deck.create!({                            # id : 110
@@ -898,25 +2294,100 @@ Deck.create!({                            # id : 110
   description: "Groups of matter",
   subject_id: 23
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 23
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 23
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 23
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 23
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 23
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 23
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Algebra",
 Deck.create!({                          # id : 115
@@ -924,25 +2395,100 @@ Deck.create!({                          # id : 115
   description: "Groups of matter",
   subject_id: 24
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 24
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 24
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 24
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 24
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 24
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 24
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Periodic Table",
 Deck.create!({                          # id : 120
@@ -950,25 +2496,100 @@ Deck.create!({                          # id : 120
   description: "Groups of matter",
   subject_id: 25
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 25
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 25
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 25
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 25
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 25
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 25
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Bible",
 Deck.create!({                          # id : 125
@@ -976,25 +2597,100 @@ Deck.create!({                          # id : 125
   description: "Groups of matter",
   subject_id: 26
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 26
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 26
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 26
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 26
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 26
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 26
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Geography",
 Deck.create!({                          # id : 130
@@ -1002,25 +2698,100 @@ Deck.create!({                          # id : 130
   description: "Groups of matter",
   subject_id: 27
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 27
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 27
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 27
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 27
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 27
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 27
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "Hollywood Celebrities",
 Deck.create!({                          # id : 135
@@ -1028,25 +2799,100 @@ Deck.create!({                          # id : 135
   description: "Groups of matter",
   subject_id: 28
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 28
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 28
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 28
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 28
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 28
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 28
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 # "NBA"
 Deck.create!({                          # id : 140
@@ -1054,23 +2900,98 @@ Deck.create!({                          # id : 140
   description: "Groups of matter",
   subject_id: 29
   })
-Deck.create!({
-  title: "Nutrients",
-  description: "Groups of matter",
-  subject_id: 29
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 29
   })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
 Deck.create!({
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 29
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+Deck.create!({
+  title: "Nutrients",
+  description: "Groups of matter",
+  subject_id: 29
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
 Deck.create!({                          # id : 144
   title: "Nutrients",
   description: "Groups of matter",
   subject_id: 29
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
+  })
+  Card.create!({
+    question: "question",
+    answer: "answer",
+    deck_id: 10
   })
