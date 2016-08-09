@@ -1,17 +1,16 @@
 .user-subject-index {
-  height: 500px;
   width: 300px;
+  min-height: 500px;
   float: left;
   display: flex;
   flex-direction: column;
+  background-color: #F2F2F2;
+  border-right: 3px solid #E8E8E8;
 }
 
 .subject-index-header {
-  border-right: 3px solid #E8E8E8;
   margin-bottom: 5px;
-  background-color: #F2F2F2;
-  height: 60px;
-  padding: 15px;
+  padding-left: 15px;
   h3 {
     font-weight: 300;
   }
@@ -19,23 +18,25 @@
 
 .user-subject-list {
   list-style: none;
-  border-right: 3px solid #E8E8E8;
   background-color: #F2F2F2;
   color: #28B5DC;
+  padding-left: 15px;
 }
 
 .user-subject-list-item {
   border-bottom: 1px solid #E8E8E8;
-  padding: 20px;
+  width: auto;
+  padding: 15px;
+  float: left;
 }
 
 .index-subject-thumb {
   width: 50px;
+  float: left;
   margin-right: 10px;
 }
 
 .user-subject-list-item a {
   text-decoration: none;
   float: left;
-
 }

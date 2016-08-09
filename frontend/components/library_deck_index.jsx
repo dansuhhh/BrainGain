@@ -30,7 +30,6 @@ const LibraryDeckIndex = React.createClass({
   },
 
   handleEditDeck(deckId, event){
-    debugger
     event.preventDefault();
     hashHistory.push(`decks/${deckId}`);
   },

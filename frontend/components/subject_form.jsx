@@ -8,7 +8,7 @@ const SubjectForm = React.createClass({
 
   updateTitle(event){
     this.setState({
-      title: event.target.value
+      title: event.target.value,
     });
   },
 
@@ -30,15 +30,14 @@ const SubjectForm = React.createClass({
 
     return(
       <div>
-        <h6>New Subject</h6>
         {error}
-        <form onSubmit={this.handleSubmit}>
+        <form className="subject-form" onSubmit={this.handleSubmit}>
           <input
             type="text"
             value={this.state.title}
-            placeholder="e.g. Biology 101"
+            placeholder="Create a subject"
             onChange={this.updateTitle}/>
-          <input type="submit" value="Create"/>
+          <input type="submit" value="+"/>
         </form>
       </div>
     );

@@ -2,6 +2,7 @@ const React = require('react');
 const LibraryDeckIndex = require('./library_deck_index');
 const SubjectActions = require('../actions/subject_actions');
 const SubjectStore = require('../stores/subject_store');
+const hashHistory = require('react-router').hashHistory;
 
 const UserSubjectDetail = React.createClass({
   getInitialState() {
@@ -57,6 +58,7 @@ const UserSubjectDetail = React.createClass({
 
   handleDelete(event){
     SubjectActions.removeSubject(this.props.params.subjectId);
+    hashHistory.push("/library");
   },
 
   updateFile(event){
@@ -79,15 +81,15 @@ const UserSubjectDetail = React.createClass({
 
     return(
       <section className="section-subject-detail">
-        <a className="subject-info">
+        <article className="subject-info">
           <a className="subject-avatar">
             <img src={`${this.state.imageUrl}`}/>
             <input type="file" onChange={this.updateFile}/>
-            <a className="thumbnail-edit"/>
+            // <a className="thumbnail-edit"/>
           </a>
           {title}
           <a className="delete-button" onClick={this.handleDelete}>Delete Subject</a>
-        </a>
+        </article>
         <LibraryDeckIndex subjectId={this.props.params.subjectId}/>
       </section>
     );

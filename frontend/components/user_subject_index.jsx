@@ -43,7 +43,7 @@ const UserSubjectIndex = React.createClass({
           <h3>Subjects</h3>
         </header>
         <SubjectForm />
-        <ul className="user-subject-list">
+        <ul className="group user-subject-list">
           {userSubjects}
         </ul>
       </aside>
