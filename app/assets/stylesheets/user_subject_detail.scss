@@ -9,15 +9,15 @@
 .subject-info {
   border-bottom: 1px solid #E8E8E8;
   padding-bottom: 30px;
-    h1 {
-      color: #FF8A4C;
-    }
-    .subject-avatar {
-      width: 100px;
-      height: 100px;
-      position: relative;
-      float: left;
-      margin-right: 10px;
+  h1 {
+    color: #FF8A4C;
+  }
+  .subject-avatar {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
       input {
         position: absolute;
         width: 100%;
@@ -27,24 +27,26 @@
         left: 0;
         right: 0;
       }
-      input:hover {
-        cursor: pointer;
+      .thumbnail-edit {
+        background-image: image-url("thumb-edit.png");
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        opacity: 1;
+        z-index: 20;
+        bottom: 0;
+        right: 0;
       }
-        .thumbnail-edit {
-          background-image: image-url("thumb-edit.png");
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          opacity: 1;
-          z-index: 20;
-          bottom: 0;
-          right: 0;
-        }
-      }
+  }
   .delete-button {
     text-align: right;
     background-color: #31B0D5;
     color: white;
     cursor: pointer;
   }
+}
+
+.subject-avatar:hover {
+  cursor: pointer;
 }

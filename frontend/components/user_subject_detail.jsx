@@ -82,11 +82,11 @@ const UserSubjectDetail = React.createClass({
     return(
       <section className="section-subject-detail">
         <article className="subject-info">
-          <a className="subject-avatar">
+          <div className="subject-avatar">
             <img src={`${this.state.imageUrl}`}/>
             <input type="file" onChange={this.updateFile}/>
-            // <a className="thumbnail-edit"/>
-          </a>
+            <a className="thumbnail-edit"/>
+          </div>
           {title}
           <a className="delete-button" onClick={this.handleDelete}>Delete Subject</a>
         </article>

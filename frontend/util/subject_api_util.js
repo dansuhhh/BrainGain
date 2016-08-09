@@ -11,8 +11,6 @@ module.exports = {
     $.ajax({
       url: "api/subjects",
       type: "POST",
-      processData: false,
-      contentType: false,
       dataType: 'json',
       data: { subject: formData },
       success: success

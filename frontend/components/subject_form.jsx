@@ -17,8 +17,8 @@ const SubjectForm = React.createClass({
     if (this.state.title === "") {
       this.setState({ error: "Please enter a subject title!"});
     } else {
-      this.setState({ title: "" });
       SubjectActions.createSubject({ title: this.state.title });
+      this.setState({ title: "" });
     }
   },
 
