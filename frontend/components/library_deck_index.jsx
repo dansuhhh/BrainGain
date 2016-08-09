@@ -2,6 +2,7 @@ const React = require ('react');
 const DeckStore = require('../stores/deck_store');
 const DeckActions = require('../actions/deck_actions');
 const hashHistory = require('react-router').hashHistory;
+const Link = require('react-router').Link;
 
 const LibraryDeckIndex = React.createClass({
   getInitialState(){
@@ -33,6 +34,14 @@ const LibraryDeckIndex = React.createClass({
     hashHistory.push(`decks/${deckId}`);
   },
 
+  createDeck(deckId, event){
+    DeckActions.createDeck({
+      title: "untitled",
+      description: "blank",
+      subject_id: this.props.subjectId
+    })
+  },
+
   deleteDeck(deckId, event) {
     DeckActions.removeDeck(deckId);
   },
@@ -53,6 +62,11 @@ const LibraryDeckIndex = React.createClass({
                   Delete
                 </a>
               </td>
+              <td>
+                <Link to={`/study/${deck.id}`}>
+                  Study
+                </Link>
+              </td>
           </tr>);
       });
     }
@@ -61,9 +75,10 @@ const LibraryDeckIndex = React.createClass({
       <article className="subject-deck-index">
         <table className="subject-deck-table">
           <thead>
-            <tr><th>
-              Decks
-            </th></tr>
+            <tr>
+              <th>Decks</th>
+              <th><a onClick={this.createDeck}>Create Deck</a></th>
+            </tr>
           </thead>
           <tbody>
             {subjectDecks}

@@ -11,6 +11,7 @@ const PublicSubjectIndex = require('./components/public_subject_index');
 const Main = require('./components/main');
 const UserSubjectDetail = require('./components/user_subject_detail');
 const DeckEditForm = require('./components/deck_edit_form');
+const Study = require('./components/study');
 
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
 
@@ -29,6 +30,7 @@ const routes = (
       <Route path=":subjectId" component={ UserSubjectDetail } />
     </Route>
     <Route path="decks/:deckId" component={ DeckEditForm } />
+    <Route path="study/:deckId" component={ Study } />
   </Route>
 );
 
