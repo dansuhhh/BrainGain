@@ -26,12 +26,14 @@ const DeckEditForm = React.createClass({
   render(){
     let tableHeader;
     if(this.state.cards.length > 0){
-      tableHeader = <thead>Flashcards inside { `${DeckStore.find(parseInt(this.props.params.deckId)).title}`}</thead>;
+      tableHeader = (<thead>
+        Flashcards inside { `${DeckStore.find(parseInt(this.props.params.deckId)).title}`}
+      </thead>);
     }
     return(
       <article>
         <table className="deck-edit-table">
-          <thead>Flashcards inside { `${DeckStore.find(parseInt(this.props.params.deckId)).title}`}</thead>
+          { tableHeader }
           <tbody>
           </tbody>
         </table>

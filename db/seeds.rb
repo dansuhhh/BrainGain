@@ -21,6 +21,10 @@
 # end
 #
 # puts "There are now #{Transaction.count} rows in the transactions table"
+User.destroy_all
+Subject.destroy_all
+Deck.destroy_all
+Card.destroy_all
 
 
 # User seeds
