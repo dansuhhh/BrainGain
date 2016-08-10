@@ -16,7 +16,7 @@ class Api::MasteriesController < ApplicationController
 
   def update
     @mastery = Mastery.find(params[:id])
-    if @mastery.update_attributes(mastery_params)
+    if @mastery.update(mastery_params)
       render "api/masteries/show"
     else
       render json: @mastery.errors.full_message, status: 422

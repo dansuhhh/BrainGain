@@ -16,9 +16,8 @@ const DeckMastery = React.createClass({
     this.deckListener = DeckStore.addListener(this.handleDeckChange);
     this.cardListener = CardStore.addListener(this.handleCardsChange);
     this.masteryListener = MasteryStore.addListener(this.handleMasteriesChange);
-    DeckActions.getDeck(this.props.deckId);
+    DeckActions.fetchAllDecks();
     CardActions.fetchAllCards(this.props.deckId);
-    MasteryActions.fetchAllMasteries();
   },
 
   componentWillUnmount(){
@@ -28,13 +27,10 @@ const DeckMastery = React.createClass({
   },
 
   componentWillReceiveProps(newProps){
-    let newMasteries = Object.keys(CardStore.allOfDeck(newProps.deckId)).map( cardId => {
-      return MasteryStore.ofCard(cardId);
-    });
-    DeckActions.getDeck(newProps.deckid);
     this.setState({
+      deck: DeckStore.find(newProps.deckId),
       cards: CardStore.allOfDeck(newProps.deckId),
-      masteries: newMasteries
+      masteries: this.state.cards.masteries
     });
   },
 
@@ -51,25 +47,20 @@ const DeckMastery = React.createClass({
   },
 
   handleMasteriesChange(){
-    let newMasteries = Object.keys(CardStore.allOfDeck(this.props.deckId)).map( cardId => {
-      return MasteryStore.ofCard(cardId);
-    });
     this.setState({
-      masteries: newMasteries
+      masteries: this.state.cards.masteries
     });
   },
 
   render() {
-    let title;
+    let title = this.state.deck.title ? this.state.deck.title : "";
     let bar1 = 0;
     let bar2 = 0;
     let bar3 = 0;
     let bar4 = 0;
     let bar5 = 0;
     let count = 0;
-    if (this.state.deck.title){
-      title = this.state.deck.title;
-    }
+    debugger
     if (Object.keys(this.state.masteries).length > 0 ){
       count = Object.keys(this.state.masteries).length;
       Object.keys(this.state.masteries).forEach( mastery_id => {
