@@ -17,7 +17,6 @@ const UserSubjectDetail = require('./components/user_subject_detail');
 const DeckEditForm = require('./components/deck_edit_form');
 const Study = require('./components/study');
 
-
 const _ensureLoggedIn = (nextState, replace) => {
   if (!SessionStore.isUserLoggedIn()){
     replace("/session/new");

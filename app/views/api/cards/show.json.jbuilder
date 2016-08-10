@@ -1,1 +1,1 @@
-json.extract! @card, :id, :question, :answer, :deck_id, :masteries
+json.partial! 'api/cards/card', card: @card

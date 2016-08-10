@@ -4,4 +4,11 @@ class Deck < ActiveRecord::Base
   belongs_to :subject
 
   has_many :cards
+
+  has_many(
+    :masteries,
+    through: :cards,
+    source: :masteries
+  )
+
 end

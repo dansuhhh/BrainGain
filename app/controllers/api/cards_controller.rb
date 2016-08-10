@@ -16,7 +16,7 @@ class Api::CardsController < ApplicationController
 
   def update
     @card = Card.find(params[:id])
-    if @card.update_attributes(card_params)
+    if @card.update(card_params)
       render "api/cards/show"
     else
       render json: @card.errors.full_message, status: 422

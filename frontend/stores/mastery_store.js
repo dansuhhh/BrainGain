@@ -14,15 +14,14 @@ MasteryStore.all = () => {
   return masteries;
 };
 
-MasteryStore.allOfCard = (cardId) => {
-  let masteries = {};
+MasteryStore.ofCard = (cardId) => {
+  let mastery;
   Object.keys(_masteries).forEach( key => {
-    if ((_masteries[key].card_id === parseInt(cardId)) &&
-      (_masteries[key].user_id === SessionStore.currentUser().id)) {
-      masteries[key] = _masteries[key];
+    if (_masteries[key].card_id === parseInt(cardId)) {
+      mastery = _masteries[key];
     }
   });
-  return masteries;
+  return mastery;
 };
 
 MasteryStore.find = (id) => {

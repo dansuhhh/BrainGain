@@ -21,4 +21,10 @@ class Subject < ActiveRecord::Base
     through: :decks,
     source: :cards
   )
+
+  has_many(
+    :masteries,
+    through: :cards,
+    source: :masteries
+  )
 end

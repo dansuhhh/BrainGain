@@ -1,5 +1,10 @@
 class Api::MasteriesController < ApplicationController
 
+  def index
+    @masteries = Mastery.where(user_id: current_user.id)
+    render "api/masteries/index"
+  end
+
   def create
     @mastery = Mastery.new(mastery_params)
     if @mastery.save

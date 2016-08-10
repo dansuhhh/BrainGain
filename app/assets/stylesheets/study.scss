@@ -24,12 +24,31 @@
 }
 
 .progress {
-  width: 420px;
+  width: 375px;
   background-color: #333333;
-
+  h3 {
+    height: 25px;
+    background-color: #4A4A4A;
+    text-align: left;
+    font-weight: normal;
+    padding: 10px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+  h3:before {
+    color: #90969C;
+    content: "Studying: ";
+  }
+  a {
+    background-color: #29A5DC;
+    color: white;
+    width: 190px;
+    text-align: center;
+    height: 45px;
+    margin: 15px;
+  }
 }
 
-.flashcard {
-  width: 1000px;
-  background-color: #F2F2F2;
+.flashcard-section {
+  width: 600px;
 }

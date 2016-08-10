@@ -1,1 +1,1 @@
-json.extract! @mastery, :id, :card_id, :user_id, :level
+json.partial! 'api/masteries/mastery', mastery: @mastery

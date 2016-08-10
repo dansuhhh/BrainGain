@@ -15,7 +15,7 @@ const MasteryActions = {
     MasteryApiUtil.updateMastery(formData, MasteryActions.receiveMastery);
   },
 
-  receiveAllMasteries(masteriess){
+  receiveAllMasteries(masteries){
     AppDispatcher.dispatch({
       actionType: MasteryConstants.CARDS_RECEIVED,
       masteries: masteries
