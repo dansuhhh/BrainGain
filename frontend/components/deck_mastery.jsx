@@ -17,7 +17,7 @@ const DeckMastery = React.createClass({
     this.cardListener = CardStore.addListener(this.handleCardsChange);
     this.masteryListener = MasteryStore.addListener(this.handleMasteriesChange);
     DeckActions.getDeck(this.props.deckId);
-    CardActions.fetchAllCards();
+    CardActions.fetchAllCards(this.props.deckId);
     MasteryActions.fetchAllMasteries();
   },
 

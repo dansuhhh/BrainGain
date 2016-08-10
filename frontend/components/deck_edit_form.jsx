@@ -15,7 +15,7 @@ const DeckEditForm = React.createClass({
       DeckActions.fetchAllDecks();
     }
     this.cardListener = CardStore.addListener(this.handleCardsChange);
-    CardActions.fetchAllCards();
+    CardActions.fetchAllCards(this.props.params.deckId);
   },
 
   componentWillUnmount(){

@@ -3,8 +3,8 @@ const AppDispatcher = require('../dispatcher/dispatcher');
 const CardConstants = require('../constants/card_constants');
 
 const CardActions = {
-  fetchAllCards(){
-    CardApiUtil.fetchAllCards(CardActions.receiveAllCards);
+  fetchAllCards(deckId){
+    CardApiUtil.fetchAllCards(deckId, CardActions.receiveAllCards);
   },
 
  createCard(formData){

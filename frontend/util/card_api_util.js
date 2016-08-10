@@ -1,8 +1,9 @@
 module.exports = {
-  fetchAllCards(success){
+  fetchAllCards(deckId, success){
     $.ajax({
       url: "api/cards",
       type: "GET",
+      data: { currentDeckId: deckId},
       success: success
     });
   },
