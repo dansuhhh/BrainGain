@@ -11,8 +11,15 @@
   background-color: #0D0D0D;
   display: flex;
   flex-direction: column;
+  a {
+    margin: 5px 0;
+    cursor: pointer;
+  }
   .logo {
-    background-color: white;
+    background-image: image-url("navbar_logo.png");
+    background-size: cover;
+    width: auto;
+    height: 30px;
   }
 }
 

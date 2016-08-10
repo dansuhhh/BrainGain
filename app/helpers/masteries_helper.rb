@@ -1,0 +1,2 @@
+module MasteriesHelper
+end

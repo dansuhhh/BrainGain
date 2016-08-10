@@ -28,7 +28,7 @@ DeckStore.find = (id) => {
 };
 
 DeckStore.resetDecks = decks => {
-_decks = {};
+  _decks = {};
   decks.forEach( deck => {
   _decks[deck.id] = deck;
   });
@@ -36,7 +36,7 @@ _decks = {};
 };
 
 DeckStore.setDeck = deck => {
-_decks[deck.id] = deck;
+  _decks[deck.id] = deck;
   DeckStore.__emitChange();
 };
 

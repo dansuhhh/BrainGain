@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808170005) do
+ActiveRecord::Schema.define(version: 20160810145754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 20160808170005) do
   end
 
   add_index "decks", ["subject_id"], name: "index_decks_on_subject_id", using: :btree
+
+  create_table "masteries", force: :cascade do |t|
+    t.integer  "user_id",                null: false
+    t.integer  "card_id",                null: false
+    t.integer  "level",      default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "masteries", ["card_id"], name: "index_masteries_on_card_id", using: :btree
+  add_index "masteries", ["user_id", "card_id"], name: "index_masteries_on_user_id_and_card_id", unique: true, using: :btree
+  add_index "masteries", ["user_id"], name: "index_masteries_on_user_id", using: :btree
 
   create_table "subjects", force: :cascade do |t|
     t.string   "title",              null: false

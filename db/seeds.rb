@@ -26,6 +26,7 @@ User.destroy_all
 Subject.destroy_all
 Deck.destroy_all
 Card.destroy_all
+Mastery.destroy_all
 
 
 # User seeds
@@ -2995,3 +2996,13 @@ Deck.create!({                          # id : 144
     answer: "answer",
     deck_id: 10
   })
+
+User.all.each do |user|
+  Card.all.each do |card|
+    Mastery.create!({
+      user_id: user.id,
+      card_id: card.id,
+      level: 0
+    })
+  end
+end
