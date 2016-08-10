@@ -74,10 +74,12 @@ const LibraryDeckIndex = React.createClass({
     return(
       <article className="subject-deck-index">
         <table className="subject-deck-table">
-          <thead>
+          <thead className="subject-deck-table-head">
             <tr>
-              <th>Decks</th>
-              <th><a onClick={this.createDeck}>Create Deck</a></th>
+              <th colspan="4">
+                Decks
+                <a onClick={this.createDeck}>Create Deck</a>
+              </th>
             </tr>
           </thead>
           <tbody>

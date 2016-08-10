@@ -1,7 +1,7 @@
 .public-subjects-section {
-  margin: auto;
+  margin: 0 auto;
   margin-top: 10px;
-  width: 80%;
+  width: 900px;
   padding: 30px;
   background-color: white;
   border-radius: 3px;
@@ -13,7 +13,6 @@
 }
 
 .public-subjects-section hr {
-  border: 0;
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -22,10 +21,16 @@
 .public-subjects-section ul {
   list-style: none;
   color: #55B7E3;
+
+  -moz-column-count: 3;
+  -moz-column-gap: 188px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 188px;
+  column-count: 3;
+  column-gap: 188px;
 }
 
 .public-subjects-section ul li {
-  list-style: none;
   color: #55B7E3;
   margin: 3px;
 }

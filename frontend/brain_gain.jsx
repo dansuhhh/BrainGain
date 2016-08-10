@@ -1,19 +1,22 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
 
 const SessionActions = require('./actions/session_actions');
 const SessionStore = require('./stores/session_store');
+
+//Components
 const App = require('./components/app');
+const Main = require('./components/main');
 const SignupForm = require('./components/signup_form');
 const LoginForm = require('./components/login_form');
-const Library = require('./components/library');
 const PublicSubjectIndex = require('./components/public_subject_index');
-const Main = require('./components/main');
+const PublicSubjectDetail = require('./components/public_subject_detail');
+const Library = require('./components/library');
 const UserSubjectDetail = require('./components/user_subject_detail');
 const DeckEditForm = require('./components/deck_edit_form');
 const Study = require('./components/study');
 
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
 
 const _ensureLoggedIn = (nextState, replace) => {
   if (!SessionStore.isUserLoggedIn()){
@@ -30,6 +33,7 @@ const routes = (
       <Route path=":subjectId" component={ UserSubjectDetail } />
     </Route>
     <Route path="decks/:deckId" component={ DeckEditForm } />
+    <Route path="subjects/:subjectId" component={ PublicSubjectDetail } />
     <Route path="study/:deckId" component={ Study } />
   </Route>
 );

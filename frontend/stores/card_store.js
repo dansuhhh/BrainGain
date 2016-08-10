@@ -28,7 +28,7 @@ CardStore.find = (id) => {
 };
 
 CardStore.resetCards = cards => {
-_cards = {};
+  _cards = {};
   cards.forEach( card => {
     _cards[card.id] = card;
   });
@@ -36,7 +36,7 @@ _cards = {};
 };
 
 CardStore.setCard = card => {
-_cards[card.id] = card;
+  _cards[card.id] = card;
   CardStore.__emitChange();
 };
 

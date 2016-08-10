@@ -4,17 +4,27 @@
 
 .subject-deck-table {
   width: 100%;
-  thead {
-    border-bottom: 1px solid black;
-    height: 40px;
+  text-align: left;
+  border-collapse: collapse;
+  .subject-deck-table-head {
+    th {
+      border-bottom: 3px solid #E8E8E8;
+      padding: 28px 5px;
+      a {
+        float: right;
+      }
+    }
   }
-  tr {
-    background-color: white;
-    height: 60px;
-
-  }
-  tr:nth-child(odd) {
-    background-color: #F9F9F9;
+  tbody {
+    tr {
+      background-color: white;
+    }
+    tr:nth-child(odd) {
+      background-color: #F9F9F9;
+    }
+    td {
+      padding: 20px 5px;
+    }
   }
 
 }

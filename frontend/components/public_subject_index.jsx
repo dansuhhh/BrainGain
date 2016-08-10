@@ -1,6 +1,7 @@
 const React = require('react');
 const SubjectStore = require('../stores/subject_store');
 const SubjectActions = require('../actions/subject_actions');
+const Link = require('react-router').Link;
 
 const PublicSubjectIndex = React.createClass({
   getInitialState() {
@@ -26,13 +27,11 @@ const PublicSubjectIndex = React.createClass({
     let subjectList = [];
     if (this.state.subjects){
       subjectList = this.state.subjects.map( subject => {
-        return (
-          <li
-            key={subject.id}
-            className="public-subject-item">
-            {subject.title}
-          </li>
-        );
+        return (<li key={subject.id} className="public-subject-item">
+            <Link to={`/subjects/${subject.id}`}>
+              {subject.title}
+            </Link>
+          </li>);
       });
     }
 

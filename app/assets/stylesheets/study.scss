@@ -1,0 +1,28 @@
+.study-page {
+  height: 1000px;
+  section {
+    height: 100%;
+    float: left;
+  }
+}
+
+.study-nav {
+  width: 30px;
+  background-color: #0D0D0D;
+  display: flex;
+  flex-direction: column;
+  .logo {
+    background-color: white;
+  }
+}
+
+.progress {
+  width: 420px;
+  background-color: #333333;
+
+}
+
+.flashcard {
+  width: 1000px;
+  background-color: #F2F2F2;
+}
