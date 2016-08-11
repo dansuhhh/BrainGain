@@ -1,6 +1,9 @@
 const React = require('react');
+const Link = require('react-router').Link;
+const hashHistory = require('react-router').hashHistory;
 const CardStore = require('../stores/card_store');
 const CardActions = require('../actions/card_actions');
+const MasteryActions = require('../actions/mastery_actions');
 const DeckStore = require('../stores/deck_store');
 const DeckActions = require('../actions/deck_actions');
 
@@ -52,16 +55,21 @@ const DeckEditForm = React.createClass({
   },
 
   deleteCard(currentCardId){
-    let newCards = Object.assign({}, this.state.cards);
-    delete newCards[currentCardId];
-    this.setState({
-      cards: newCards
-    });
+    if (CardStore.find(currentCardId)){
+      CardActions.removeCard(currentCardId);
+    } else {
+      let newCards = Object.assign({}, this.state.cards);
+      delete newCards[currentCardId];
+      this.setState({
+        cards: newCards
+      });
+    }
   },
 
   addRow(){
     let newCard = {
-      id: (CardStore.all()[CardStore.all().length - 1].id + 1),
+      //guarantee uniqueness
+      id: Math.random(),
       question: "",
       answer: "",
       deck_id: this.props.params.deckId
@@ -71,6 +79,26 @@ const DeckEditForm = React.createClass({
     this.setState({
       cards: newCards
     });
+  },
+
+  save(){
+    Object.keys(this.state.cards).forEach( cardId => {
+      let card = this.state.cards[cardId];
+      if (card.id < 1) {
+        CardActions.createCard({
+          question: card.question,
+          answer: card.answer,
+          deck_id: card.deck_id
+        });
+      } else {
+        CardActions.updateCard({
+          id: card.id,
+          question: card.question,
+          answer: card.answer
+        });
+      }
+    });
+    hashHistory.push(`/library`);
   },
 
   render(){
@@ -122,9 +150,7 @@ const DeckEditForm = React.createClass({
           </tbody>
         </table>
         <ul className="deck-edit-buttons">
-          <a>Reset</a>
-          <a>Save</a>
-          <a>Study</a>
+          <a onClick={this.save}>Save</a>
         </ul>
       </article>
     );

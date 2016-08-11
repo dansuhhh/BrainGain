@@ -8,6 +8,11 @@ class Api::CardsController < ApplicationController
   def create
     @card = Card.new(card_params)
     if @card.save
+      Mastery.create!({
+        user_id: current_user.id,
+        card_id: @card.id,
+        level: 0
+        })
       render "api/cards/show"
     else
       render json: @card.errors.full_messages, status: 422

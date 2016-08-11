@@ -3000,6 +3000,40 @@ Deck.create!({                          # id : 144
     deck_id: 10
   })
 
+User.create!({username: "michaelscottxoxo", password: "dandan"})
+Subject.create!({ title: "Basic Math", author_id: 8 })
+  Deck.create!({ title: "Addition", description: "Adding stuff", subject_id: 30 })
+    Card.create!({ question: "3 + 3", answer: "6", deck_id: 145 })
+    Card.create!({ question: "1 + 1", answer: "2", deck_id: 145 })
+    Card.create!({ question: "10 + 10", answer: "100", deck_id: 145 })
+    Card.create!({ question: "35 + 35", answer: "70", deck_id: 145 })
+    Card.create!({ question: "50 + 51", answer: "101", deck_id: 145 })
+    Card.create!({ question: "150 + 120", answer: "270", deck_id: 145 })
+    Card.create!({ question: "302 + 432", answer: "734", deck_id: 145 })
+    Card.create!({ question: "1029 + 2938", answer: "3967", deck_id: 145 })
+    Card.create!({ question: "-1 + 68", answer: "67", deck_id: 145 })
+    Card.create!({ question: "-5 + -20", answer: "-25", deck_id: 145 })
+    Card.create!({ question: "-32 + 32", answer: "0", deck_id: 145 })
+  Deck.create!({ title: "Subtraction" description: "Subtracting stuff" subject_id: 30 })
+    Card.create!({ question: "3 - 3", answer: "0", deck_id: 146 })
+    Card.create!({ question: "1 - 1", answer: "0", deck_id: 146 })
+    Card.create!({ question: "10 - 10", answer: "0", deck_id: 146 })
+    Card.create!({ question: "35 - 35", answer: "0", deck_id: 146 })
+    Card.create!({ question: "50 - 51", answer: "-1", deck_id: 146 })
+    Card.create!({ question: "150 - 120", answer: "30", deck_id: 146 })
+    Card.create!({ question: "302 - 432", answer: "-130", deck_id: 146 })
+    Card.create!({ question: "1029 - 2938", answer: "-1909", deck_id: 146 })
+    Card.create!({ question: "-1 - 68", answer: "-69", deck_id: 146 })
+    Card.create!({ question: "-5 - -20", answer: "20", deck_id: 146 })
+    Card.create!({ question: "-32 - 32", answer: "-64", deck_id: 146 })
+Subject.create!({ title: "ABCs", author_id: 8 })
+  Deck.create!({ title: "Advanced" description: "Subtracting stuff" subject_id: 31 })
+
+
+
+
+
+
 User.all.each do |user|
   Card.all.each do |card|
     Mastery.create!({

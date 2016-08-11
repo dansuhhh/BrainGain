@@ -17,8 +17,6 @@ const LoginForm = React.createClass({
     ErrorStore.addListener(this.handleErrorChange);
   },
 
-
-
   handleLoggedChange(){
     if (SessionStore.isUserLoggedIn()){
       hashHistory.push("/");
@@ -48,14 +46,6 @@ const LoginForm = React.createClass({
     SessionActions.logIn({
       username: this.state.username,
       password: this.state.password
-    });
-  },
-
-  handleDan(event){
-    event.preventDefault();
-    SessionActions.logIn({
-      username: "danielleColeslaw",
-      password: "dandan"
     });
   },
 
@@ -92,7 +82,6 @@ const LoginForm = React.createClass({
             <input type="submit" value="Log In"/>
           </form>
           <Link to="/users/new">Sign Up</Link>
-          <a onClick={this.handleDan}>Log In as Dan</a>
           <a onClick={this.handleLeen}>Log In as Leen</a>
         </article>
         <div className="cf">

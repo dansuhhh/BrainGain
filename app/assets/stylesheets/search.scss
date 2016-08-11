@@ -1,7 +1,19 @@
 .search {
   width:100%;
   height: 550px;
-  border: solid 1px black;
   background-image: image-url("home-background.jpeg");
   background-size: cover;
+  .search-bar {
+    width: 950px;
+    height: 80px;
+    input {
+      float: left;
+      padding: 33px 0;
+    }
+    a {
+      float:left;
+      height: 100%;
+      padding: 35px;
+    }
+  }
 }

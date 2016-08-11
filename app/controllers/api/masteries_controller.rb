@@ -7,6 +7,8 @@ class Api::MasteriesController < ApplicationController
 
   def create
     @mastery = Mastery.new(mastery_params)
+    @mastery.level = 0
+    @mastery.user_id = current_user.id
     if @mastery.save
       render "api/masteries/show"
     else
@@ -30,7 +32,7 @@ class Api::MasteriesController < ApplicationController
 
   private
   def mastery_params
-    params.require(:mastery).permit(:user_id, :card_id, :level)
+    params.require(:mastery).permit(:card_id, :level)
   end
 
 end

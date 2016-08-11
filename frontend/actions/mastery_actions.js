@@ -7,6 +7,10 @@ const MasteryActions = {
     MasteryApiUtil.fetchAllMasteries(MasteryActions.receiveAllMasteries);
   },
 
+  createMastery(formData){
+    MasteryApiUtil.createMastery(formData, MasteryActions.receiveMastery);
+  },
+
   getMastery(id){
     MasteryApiUtil.getMastery(id, MasteryActions.receiveMastery);
   },

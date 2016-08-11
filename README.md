@@ -18,11 +18,11 @@ BrainGain is a web application inspired by Brainscape that will be built using R
 - [X] Decks
   - [X] Create, edit, and delete decks
   - [X] Create, edit, and delete cards within deck edit
-  - [ ] View user's learning progress
-- [ ] Study mode
-  - [ ] Recursively iterate through cards until deck is fully mastered
-  - [ ] View progress of learning a deck
-  - [ ] Accurate flipping behavior of a typical flashcard
+  - [X] View user's learning progress
+- [X] Study mode
+  - [X] Recursively iterate through cards until deck is fully mastered
+  - [X] View progress of learning a deck
+  - [X] Accurate flipping behavior of a typical flashcard
 - [ ] Search
   - [ ] Search through all subjects
   - [ ] Accurate search predictions/recommendations
@@ -56,7 +56,7 @@ BrainGain is a web application inspired by Brainscape that will be built using R
 - [X] set up flux cycle for frontend auth
 - [X] user signup/signin components
 - [X] blank landing component after signin
-- [ ] style signin/signup components
+- [X] style signin/signup components
 - [X] seed users
 
 ### Phase 2: Subjects Model, API, and components (2 days, W1 F 6pm)
@@ -76,10 +76,10 @@ the API.
   - [X] `SubjectIndexItem`
   - [X] `SubjectForm`
 - [X] refactor to separate Subjects into Public and User's Subjects
-- [ ] error handling
-- [ ] style subjects components
+- [X] error handling
+- [X] style subjects components
 - [X] implement image upload for subject avatar
-- [ ] BONUS: add image column (gem paperclip) to subjects
+- [X] BONUS: add image column (gem paperclip) to subjects
 
 ### Phase 3: Decks & Cards (2 day, W2 Tu 6pm)
 
@@ -90,24 +90,24 @@ the API.
   - [X] Deck CRUD
   - [X] adding decks requires a subject
   - [X] viewing decks by subject
-- [ ] Use CSS to style new components
+- [X] Use CSS to style new components
 - [X] Seed Decks
 - [X] create `Card` model
 - build out API, Flux loop, and components for:
   - [X] Card CRUD
   - [X] adding cards requires a deck
   - [X] editing cards requires a deck
-  - [ ] viewing cards by deck
-- [ ] Use CSS to style new components
-- [ ] Seed Cards
+  - [X] viewing cards by deck
+- [X] Use CSS to style new components
+- [X] Seed Cards
 
 ### Phase 4: - Flashcard flipping for Study (1 day, W2 W 6pm)
 
 **objective:** Add flashcard manipulation to cards in study view
 
-- [ ] Pair flip button with question side of card and user prompt with answer side of card
-- [ ] Use CSS to achieve flashcard behavior
-- [ ] Create algorithm to show the user the progress of mastering a deck
+- [X] Pair flip button with question side of card and user prompt with answer side of card
+- [X] Use CSS to achieve flashcard behavior
+- [X] Create algorithm to show the user the progress of mastering a deck
 
 ### Phase 5: Search (2 days, W2 F 6pm)
 

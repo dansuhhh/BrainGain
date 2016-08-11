@@ -84,10 +84,10 @@ const Flashcard = React.createClass({
       <section className="flashcard-section">
         <article onClick={this.flipCard} className={`flashcard ${this.state.side}`}>
           <div className="front">
-            <p>"QUESTIONS"</p>
+            <p>{content}</p>
           </div>
           <div className="back">
-            <p>"ANSWER"</p>
+            <p>{content}</p>
           </div>
         </article>
         {prompt}

@@ -36,6 +36,10 @@
    font-weight: 400;
  }
 
+ a {
+   cursor: pointer;
+ }
+
  img {
    display: block;
    width: 100%;

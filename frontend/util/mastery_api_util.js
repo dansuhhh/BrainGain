@@ -7,6 +7,15 @@ module.exports = {
     });
   },
 
+  createMastery(formData, success){
+    $.ajax({
+      url: "api/masteries",
+      type: "POST",
+      data: { mastery: formData },
+      success: success
+    });
+  },
+
   updateMastery(formData, success){
     $.ajax({
       url: `api/masteries/${formData.id}`,
