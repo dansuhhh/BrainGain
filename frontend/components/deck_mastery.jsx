@@ -9,7 +9,7 @@ const Link = require('react-router').Link;
 
 const DeckMastery = React.createClass({
   getInitialState() {
-    return { deck: {}, cards: {}, masteries: {} };
+    return { deck: {}, cards: {}, masteries: [] };
   },
 
   componentDidMount(){
@@ -18,6 +18,7 @@ const DeckMastery = React.createClass({
     this.masteryListener = MasteryStore.addListener(this.handleMasteriesChange);
     DeckActions.fetchAllDecks();
     CardActions.fetchAllCards(this.props.deckId);
+    MasteryActions.fetchAllMasteries();
   },
 
   componentWillUnmount(){
@@ -27,10 +28,15 @@ const DeckMastery = React.createClass({
   },
 
   componentWillReceiveProps(newProps){
+    let newCards = CardStore.allOfDeck(newProps.deckId);
+    let newMasteries = [];
+    Object.keys(newCards).forEach( cardId => {
+      newMasteries.push(MasteryStore.ofCard(cardId));
+    });
     this.setState({
       deck: DeckStore.find(newProps.deckId),
-      cards: CardStore.allOfDeck(newProps.deckId),
-      masteries: this.state.cards.masteries
+      cards: newCards,
+      masteries: newMasteries
     });
   },
 
@@ -47,8 +53,12 @@ const DeckMastery = React.createClass({
   },
 
   handleMasteriesChange(){
+    let newMasteries = [];
+    Object.keys(this.state.cards).forEach( cardId => {
+      newMasteries.push(MasteryStore.ofCard(cardId));
+    });
     this.setState({
-      masteries: this.state.cards.masteries
+      masteries: newMasteries
     });
   },
 
@@ -60,8 +70,7 @@ const DeckMastery = React.createClass({
     let bar4 = 0;
     let bar5 = 0;
     let count = 0;
-    debugger
-    if (Object.keys(this.state.masteries).length > 0 ){
+    if (this.state.masteries){
       count = Object.keys(this.state.masteries).length;
       Object.keys(this.state.masteries).forEach( mastery_id => {
         let mastery = this.state.masteries[mastery_id];

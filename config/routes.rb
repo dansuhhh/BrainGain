@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :subjects, except: [:new, :edit]
     resources :decks, except: [:new, :edit]
     resources :cards, except: [:new, :edit]
-    resources :masteries, only: [:index, :create, :edit, :show]
+    resources :masteries, except: [:new, :edit]
   end
 
 

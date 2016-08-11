@@ -56,22 +56,30 @@ const SignupForm = React.createClass({
       })
     }
     return(
-      <div className="auth-form-div">
-        <h4 className="auth-header">Sign Up</h4>
-        {errorList}
-        <form onSubmit={this.handleSubmit}>
-          <input
-            className="auth-input"
-            type="text"
-            placeholder="Username"
-            onChange={this.updateUsername}/>
-          <input
-            className="auth-input"
-            type="password"
-            placeholder="Password"
-            onChange={this.updatePassword}/>
-          <input type="submit"/>
-        </form>
+      <div className="auth-page">
+        <article className="auth-form-article">
+          <h4 className="auth-header">Sign Up</h4>
+          {errorList}
+          <form onSubmit={this.handleSubmit}>
+            <input
+              className="auth-input"
+              type="text"
+              placeholder="Username"
+              onChange={this.updateUsername}/>
+            <input
+              className="auth-input"
+              type="password"
+              placeholder="Password"
+              onChange={this.updatePassword}/>
+            <input type="submit"/>
+          </form>
+        </article>
+        // <div className="cf">
+        //   <a href="#" className="image1" />
+        //   <a href="#" className="image2" />
+        //   <a href="#" className="image3" />
+        //   <a href="#" className="image4" />
+        // </div>
       </div>
     );
   }

@@ -71,12 +71,15 @@ subjects = [
   "NBA" #29th
 ]
 
-# 7 users
-author_ids = (1..7).to_a
-
 # randomly assign subjects to a user
+user_id = 1
 subjects.each do |subject|
-  Subject.create!({ title: subject, author_id: author_ids.sample })
+  # 7 users
+  if user_id == 8
+    user_id = 1
+  end
+  Subject.create!({ title: subject, author_id: user_id })
+  user_id += 1
 end
 
 # "Geometry"

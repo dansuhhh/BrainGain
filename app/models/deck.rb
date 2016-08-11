@@ -11,4 +11,6 @@ class Deck < ActiveRecord::Base
     source: :masteries
   )
 
+
+
 end

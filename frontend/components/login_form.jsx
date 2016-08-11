@@ -17,6 +17,8 @@ const LoginForm = React.createClass({
     ErrorStore.addListener(this.handleErrorChange);
   },
 
+
+
   handleLoggedChange(){
     if (SessionStore.isUserLoggedIn()){
       hashHistory.push("/");
@@ -73,25 +75,32 @@ const LoginForm = React.createClass({
       })
     }
     return(
-      <div className="auth-form-div">
-        <h2>Login</h2>
-        {errorList}
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="Username"
-            onChange={this.updateUsername}/>
-          <input
-            type="password"
-            placeholder="Password"
-            onChange={this.updatePassword}/>
-          <hr></hr>
-          <input type="submit" value="Log In"/>
-        </form>
-        <Link to="/users/new">Sign Up</Link>
-        <a onClick={this.handleDan}>Log In as Dan</a>
-        <a onClick={this.handleLeen}>Log In as Leen</a>
-
+      <div className="auth-page">
+        <article className="auth-form-article">
+          <h2>Login</h2>
+          {errorList}
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              placeholder="Username"
+              onChange={this.updateUsername}/>
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={this.updatePassword}/>
+            <hr></hr>
+            <input type="submit" value="Log In"/>
+          </form>
+          <Link to="/users/new">Sign Up</Link>
+          <a onClick={this.handleDan}>Log In as Dan</a>
+          <a onClick={this.handleLeen}>Log In as Leen</a>
+        </article>
+        <div className="cf">
+          <a href="#" className="image1" />
+          <a href="#" className="image2" />
+          <a href="#" className="image3" />
+          <a href="#" className="image4" />
+        </div>
       </div>
     );
   }

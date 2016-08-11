@@ -1,40 +1,112 @@
-.auth-form-div {
-  margin: 0 auto;
-  margin-top: 145px;
-  border: solid 1px black;
-  border-radius: 3px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  height: 400px;
-  padding: 30px;
-  h2 {
-    color: #FF9147;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
-  }
-  form {
+.auth-page {
+  .auth-form-article {
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 3px;
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 300px;
+    padding: 30px;
+    h2 {
+      color: #FF9147;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    hr {
+      border-color: #F2F2F2;
+      width: 250px;
+    }
+    input {
+      background-color: #F2F2F2;
+      padding: 5px 10px;
+      margin: 15px 0;
+      width: 250px;
+    }
+    input[type="submit"] {
+      width: 80px;
+    }
+    a {
+      cursor: pointer;
+    }
   }
-  hr {
-    border-color: #F2F2F2;
-    width: 250px;
+
+  .cf {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
   }
-  input {
-    background-color: #F2F2F2;
-    padding: 5px 10px;
-    margin: 15px 0;
-    width: 250px;
+
+  .cf a {
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
   }
-  input[type="submit"] {
-    width: 80px;
+
+  .image1 {
+    background-image: image-url("login-background1.jpg");
   }
-  a {
-    cursor: pointer;
+  .image2 {
+    background-image: image-url("login-background2.jpg");
+  }
+  .image3 {
+    background-image: image-url("login-background3.jpg");
+  }
+  .image4 {
+    background-image: image-url("login-background4.jpg");
+  }
+
+  @keyframes.cfFadeInOut {
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity:0;
+    }
+    95% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  .cf a {
+    animation-name: cfFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-direction: normal;
+  }
+
+  .cf a:nth-of-type(1) {
+    animation-delay: 15s;
+  }
+  .cf a:nth-of-type(2) {
+    animation-delay: 10s;
+  }
+  .cf a:nth-of-type(3) {
+    animation-delay: 5s;
+  }
+  .cf a:nth-of-type(4) {
+    animation-delay: 0s;
   }
 }

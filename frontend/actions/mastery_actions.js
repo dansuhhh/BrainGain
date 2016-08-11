@@ -17,14 +17,14 @@ const MasteryActions = {
 
   receiveAllMasteries(masteries){
     AppDispatcher.dispatch({
-      actionType: MasteryConstants.CARDS_RECEIVED,
+      actionType: MasteryConstants.MASTERIES_RECEIVED,
       masteries: masteries
     });
   },
 
   receiveMastery(mastery){
     AppDispatcher.dispatch({
-      actionType: MasteryConstants.CARD_RECEIVED,
+      actionType: MasteryConstants.MASTERY_RECEIVED,
       mastery: mastery
     });
   }
