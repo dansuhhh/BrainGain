@@ -3014,7 +3014,7 @@ Subject.create!({ title: "Basic Math", author_id: 8 })
     Card.create!({ question: "-1 + 68", answer: "67", deck_id: 145 })
     Card.create!({ question: "-5 + -20", answer: "-25", deck_id: 145 })
     Card.create!({ question: "-32 + 32", answer: "0", deck_id: 145 })
-  Deck.create!({ title: "Subtraction" description: "Subtracting stuff" subject_id: 30 })
+  Deck.create!({ title: "Subtraction" ,description: "Subtracting stuff", subject_id: 30 })
     Card.create!({ question: "3 - 3", answer: "0", deck_id: 146 })
     Card.create!({ question: "1 - 1", answer: "0", deck_id: 146 })
     Card.create!({ question: "10 - 10", answer: "0", deck_id: 146 })
@@ -3027,7 +3027,7 @@ Subject.create!({ title: "Basic Math", author_id: 8 })
     Card.create!({ question: "-5 - -20", answer: "20", deck_id: 146 })
     Card.create!({ question: "-32 - 32", answer: "-64", deck_id: 146 })
 Subject.create!({ title: "ABCs", author_id: 8 })
-  Deck.create!({ title: "Advanced" description: "Subtracting stuff" subject_id: 31 })
+  Deck.create!({ title: "Advanced" ,description: "Subtracting stuff", subject_id: 31 })
 
 
 

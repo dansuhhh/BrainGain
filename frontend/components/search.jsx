@@ -4,7 +4,7 @@ const Search = React.createClass({
   render() {
     return (
       <section className="search">
-        <h1>What would you like to learn today?
+        <h1>What would you like to learn today?</h1>
         <article className="group search-bar">
           <input
             type="text"
