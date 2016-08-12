@@ -26,6 +26,8 @@
 .progress {
   width: 400px;
   background-color: #333333;
+  display: flex;
+  flex-direction: column;
   h3 {
     height: 25px;
     background-color: #4A4A4A;
@@ -39,13 +41,22 @@
     color: #90969C;
     content: "Studying: ";
   }
-  a {
+  .done-button {
     background-color: #29A5DC;
     color: white;
     width: 190px;
     text-align: center;
     height: 45px;
+    padding: 10px;
     margin: 15px;
+  }
+  .masteries {
+    list-style: none;
+    color: white;
+    font-weight: 200;
+    li {
+      margin: 10px 0;
+    }
   }
 }
 .flashcard-section {
@@ -90,17 +101,26 @@
     margin-top: 30px;
     width: 100%;
     text-align: center;
+
   }
   .reveal {
     display: block;
     border: 1px solid #DADADA;
     padding: 22px;
+    background-color: #29A5DC;
+    color: white;
   }
   .mastery-choices {
-    width: 100%;
+    background-color: #29A5DC;
+    width: 95%;
     list-style: none;
+    float: left;
     li {
-      width: 20%;
+      background-color: #29A5DC;
+      width: 19%;
+      color: white;
+      padding: 10px 0;
+      cursor: pointer;
       height: 100%;
       float: left;
       text-align: center;

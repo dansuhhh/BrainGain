@@ -96,8 +96,8 @@ const DeckMastery = React.createClass({
     return(
       <section className="progress">
         <h3>{title}</h3>
-        <Link to={`/library`}>Done</Link>
-        <ul>
+        <Link className="done-button" to={`/library`}>Done</Link>
+        <ul className="masteries">
           <li>{"Total cards: " + count}</li>
           <li>{"Mastery level 1: " + bar1}</li>
           <li>{"Mastery level 2: " + bar2}</li>
