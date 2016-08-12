@@ -67,10 +67,13 @@ const UserSubjectDetail = React.createClass({
     fileReader.onloadend = () => {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
     }
-
     if (file) {
       fileReader.readAsDataURL(file);
     }
+    var formData = new FormData();
+    formData.append("subject[image]", file);
+
+    SubjectActions.updateImage(this.props.params.subjectId, formData, this.resetForm);
   },
 
   updateTitle(event){

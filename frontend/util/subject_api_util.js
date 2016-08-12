@@ -29,6 +29,18 @@ module.exports = {
     });
   },
 
+  updateImage(id, formData, success){
+    $.ajax({
+      url: `api/subjects/${id}`,
+      type: "PATCH",
+      processData: false,
+      contentType: false,
+      dataType: 'json',
+      data: formData,
+      success: success
+    });
+  },
+
   getSubject(id, success){
     $.ajax({
       url: `api/subjects/${id}`,

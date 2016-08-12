@@ -19,6 +19,10 @@ const SubjectActions = {
     SubjectApiUtil.updateSubject(formData, SubjectActions.receiveSubject);
   },
 
+  updateImage(id, formData){
+    SubjectApiUtil.updateImage(id, formData, SubjectActions.receiveSubject);
+  },
+
   removeSubject(id){
     SubjectApiUtil.removeSubject(id, SubjectActions.deleteSubject);
   },
