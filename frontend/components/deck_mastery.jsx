@@ -98,12 +98,12 @@ const DeckMastery = React.createClass({
         <h3>{title}</h3>
         <Link to={`/library`}>Done</Link>
         <ul>
-          <li>{count}</li>
-          <li>{bar1}</li>
-          <li>{bar2}</li>
-          <li>{bar3}</li>
-          <li>{bar4}</li>
-          <li>{bar5}</li>
+          <li>{"Total cards: " + count}</li>
+          <li>{"Mastery level 1: " + bar1}</li>
+          <li>{"Mastery level 2: " + bar2}</li>
+          <li>{"Mastery level 3: " + bar3}</li>
+          <li>{"Mastery level 4: " + bar4}</li>
+          <li>{"Mastery level 5: " + bar5}</li>
         </ul>
       </section>
     );

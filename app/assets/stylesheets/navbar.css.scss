@@ -21,6 +21,20 @@
   height: 100%;
 }
 
+.logo-name {
+  color: #FFFFFF;
+  float: left;
+  margin: 11px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.logo-name:before {
+  content: "BRAIN";
+  font-weight: 500;
+}
+
 .navbar-link {
   color: #666666;
   float: left;
@@ -45,9 +59,7 @@
   margin-left: 15px;
 }
 
-.navbar-greet {
-  display:inline;
-  float:right;
-  color: #666666;
-  vertical-align: middle;
+.greet {
+  float: right;
+  font-size: 18px;
 }

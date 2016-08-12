@@ -51,22 +51,25 @@ const LibraryDeckIndex = React.createClass({
     if (this.state.decks.length > 0) {
       subjectDecks = this.state.decks.map( deck => {
         return (<tr key={deck.id}>
-              <td>{deck.title}</td>
-              <td>
+              <td className="table-deck-title">
+                {deck.title}
+              </td>
+              <td className="table-study-link">
+                <Link to={`/study/${deck.id}`}>
+                 &#9002; Study
+                </Link>
+              </td>
+              <td className="table-study-link">
                 <a onClick={this.editDeck.bind(null, deck.id)}>
-                  Edit
+                  &#9002; Edit
                 </a>
               </td>
-              <td>
-                <a onClick={this.deleteDeck.bind(null, deck.id)}>
+              <td className="table-study-link">
+                <a id="table-delete" onClick={this.deleteDeck.bind(null, deck.id)}>
                   Delete
                 </a>
               </td>
-              <td>
-                <Link to={`/study/${deck.id}`}>
-                  Study
-                </Link>
-              </td>
+
           </tr>);
       });
     }

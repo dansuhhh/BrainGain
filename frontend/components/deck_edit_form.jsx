@@ -120,7 +120,7 @@ const DeckEditForm = React.createClass({
             <input onChange={this.updateCardAnswer.bind(null, cardId)} value={this.state.cards[cardId].answer} />
           </td>
           <td className="deck-edit-col-4">
-            <a onClick={this.deleteCard.bind(null, cardId)}>x</a>
+            <a onClick={this.deleteCard.bind(null, cardId)}><p>+</p></a>
           </td>
         </tr>)
       })
@@ -149,9 +149,7 @@ const DeckEditForm = React.createClass({
             { cardRows }
           </tbody>
         </table>
-        <ul className="deck-edit-buttons">
-          <a onClick={this.save}>Save</a>
-        </ul>
+        <a className="save" onClick={this.save}>Save</a>
       </article>
     );
   }

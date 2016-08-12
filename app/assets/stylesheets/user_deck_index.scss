@@ -10,8 +10,19 @@
     th {
       border-bottom: 3px solid #E8E8E8;
       padding: 28px 5px;
+      a:before {
+        content: "+ ";
+        font-weight: 500;
+        font-size: 22px;
+      }
       a {
         float: right;
+        font-size: 14px;
+        color: #29A5DC;
+        font-weight: 400;
+      }
+      a:hover {
+        color: #1A769F;
       }
     }
   }
@@ -23,8 +34,30 @@
       background-color: #F9F9F9;
     }
     td {
-      padding: 20px 5px;
+      padding: 20px 0;
+    }
+    .table-deck-title {
+      width: 55%;
+      color: #55B7E3;
+      padding-left: 25px;
+    }
+    .table-study-link a {
+      background-color: #29A5DC;
+      color: white;
+      padding: 10px;
+      float: right;
+      border-radius: 4px;
+    }
+    .table-study-link a:hover {
+      background-color: #1E86B4;
     }
   }
 
+  #table-delete {
+    background-color: #D9534F;
+    margin-right: 10px;
+  }
+  #table-delete:hover {
+    background-color: #C9302C;
+  }
 }

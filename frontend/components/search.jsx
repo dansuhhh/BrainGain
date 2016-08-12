@@ -8,7 +8,7 @@ const Search = React.createClass({
         <article className="group search-bar">
           <input
             type="text"
-            placeholder="(e.g. Geometry, Chemistry, MCAT, Spanish, LSAT)"/>
+            placeholder="(e.g. Geometry, Chemistry, MCAT, Spanish)"/>
           <a>Search</a>
         </article>
         <h3>Search over a dozen subjects...</h3>

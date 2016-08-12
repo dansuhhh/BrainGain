@@ -9,8 +9,8 @@ BrainGain is a web application inspired by Brainscape that will be built using R
 
 - [X] Hosting on Heroku
 - [X] New account creation, login, and guest/demo login
-- [ ] A production README, replacing this README
-- [ ] Subjects
+- [X] A production README, replacing this README
+- [X] Subjects
   - [X] Create and delete personal subjects
   - [ ] View and add other subjects to personal library
   - [X] Navigate through added subjects to view decks and cards

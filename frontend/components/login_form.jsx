@@ -49,10 +49,10 @@ const LoginForm = React.createClass({
     });
   },
 
-  handleLeen(event){
+  guestLogin(event){
     event.preventDefault();
     SessionActions.logIn({
-      username: "LeanOnBeanshin",
+      username: "michaelscott",
       password: "dandan"
     });
   },
@@ -67,6 +67,7 @@ const LoginForm = React.createClass({
     return(
       <div className="auth-page">
         <article className="auth-form-article">
+          <a className="login-logo"></a>
           <h2>Login</h2>
           {errorList}
           <form onSubmit={this.handleSubmit}>
@@ -82,7 +83,7 @@ const LoginForm = React.createClass({
             <input type="submit" value="Log In"/>
           </form>
           <Link to="/users/new">Sign Up</Link>
-          <a onClick={this.handleLeen}>Log In as Leen</a>
+          <a onClick={this.guestLogin}>I&#39;m just a guest</a>
         </article>
         <div className="cf">
           <a href="#" className="image1" />

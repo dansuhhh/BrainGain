@@ -3,6 +3,7 @@ const SubjectStore = require('../stores/subject_store');
 const SubjectActions = require('../actions/subject_actions');
 const SubjectForm = require('./subject_form');
 const Link = require('react-router').Link;
+const hashHistory = require('react-router').hashHistory;
 
 const UserSubjectIndex = React.createClass({
   getInitialState(){
@@ -24,16 +25,18 @@ const UserSubjectIndex = React.createClass({
     });
   },
 
+  goToSubject(id){
+    hashHistory.push(`/library/${id}`);
+  },
+
   render(){
     let userSubjects;
     if (this.state.subjects){
       userSubjects = this.state.subjects.map( subject => {
         return (
-          <li className="group user-subject-list-item" key={subject.id}>
+          <li onClick={this.goToSubject.bind(null, subject.id)} className="group user-subject-list-item" key={subject.id}>
             <a className="index-subject-thumb"><img src={`${subject.image_url}`}/></a>
-            <Link to={`/library/${subject.id}`}>
-              {subject.title}
-            </Link>
+            <a>{subject.title}</a>
         </li>);
       });
     }

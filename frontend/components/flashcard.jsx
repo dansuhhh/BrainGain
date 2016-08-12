@@ -60,14 +60,14 @@ const Flashcard = React.createClass({
     if (this.state.currentCardIndex >= 0){
       card = this.state.currentCardIndex;
       if (this.state.side === ""){
-        content = this.state.cards[this.state.currentCardIndex].question;
+        content = "Q: " + this.state.cards[this.state.currentCardIndex].question;
         prompt = (<div className="prompt">
           <a onClick={this.flipCard} className="reveal">
             Reveal Answer
           </a>
         </div>);
       } else {
-        content = this.state.cards[this.state.currentCardIndex].answer;
+        content = "A: " + this.state.cards[this.state.currentCardIndex].answer;
         prompt = (<div className="prompt">
           <p>How well did you know this?</p>
           <ul className="group mastery-choices">

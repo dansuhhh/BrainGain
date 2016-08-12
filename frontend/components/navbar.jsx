@@ -49,11 +49,12 @@ const Navbar = React.createClass({
           onClick={this.handleLogOutClick}>
           Log Out
         </a>;
-      greet = <h3 className="navbar-greet">{this.state.user.username}</h3>;
+      greet = <a className="navbar-link greet">{this.state.user.username}</a>;
     }
     return(
       <nav className="group main-nav-bar">
         <a href="#" className="brain-image"></a>
+        <a href="#" className="logo-name">GAIN</a>
         {libraryTag}
         <a href="#" className="navbar-link">FlashCards</a>
         {logOutButton}

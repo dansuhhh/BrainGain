@@ -40,7 +40,7 @@ User.create!({ username: "dreadBadKeys", password: "dandan" }) # id: 7
 
 # Subject seeds
 subjects = [
-  "Geometry",
+  "Replace",
   "Chemistry",
   "Nutrition",
   "Job Interviewing",
@@ -3000,7 +3000,7 @@ Deck.create!({                          # id : 144
     deck_id: 10
   })
 
-User.create!({username: "michaelscottxoxo", password: "dandan"})
+User.create!({username: "michaelscott", password: "dandan"})
 Subject.create!({ title: "Basic Math", author_id: 8 })
   Deck.create!({ title: "Addition", description: "Adding stuff", subject_id: 30 })
     Card.create!({ question: "3 + 3", answer: "6", deck_id: 145 })
@@ -3026,12 +3026,112 @@ Subject.create!({ title: "Basic Math", author_id: 8 })
     Card.create!({ question: "-1 - 68", answer: "-69", deck_id: 146 })
     Card.create!({ question: "-5 - -20", answer: "20", deck_id: 146 })
     Card.create!({ question: "-32 - 32", answer: "-64", deck_id: 146 })
-Subject.create!({ title: "ABCs", author_id: 8 })
-  Deck.create!({ title: "Advanced" ,description: "Subtracting stuff", subject_id: 31 })
-
-
-
-
+Subject.create!({ title: "Geometry", author_id: 8 })
+  Deck.create!({
+      title: "Basic Shapes and Angles",
+      description: "Where it all begins",
+      subject_id: 31
+      })
+      Card.create!({
+        question: "What is a point?",
+        answer: "A single location",
+        deck_id: 147
+      })
+      Card.create!({
+        question: "What is a line?",
+        answer: "A straight path passing through at least two points",
+        deck_id: 147
+      })
+      Card.create!({
+        question: "What are parallel lines?",
+        answer: "Lines that lie on the same plane but never intersect",
+        deck_id: 147
+      })
+      Card.create!({
+        question: "What are perpendicular lines?",
+        answer: "Lines that intersect at a 90 degree angle",
+        deck_id: 147
+      })
+    Deck.create!({
+      title: "Angles",
+      description: "The pointed corners of shapes",
+      subject_id: 31
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 148
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 148
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 148
+      })
+    Deck.create!({
+      title: "Triangles",
+      description: "The three-sided polygon",
+      subject_id: 31
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 149
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 149
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 149
+      })
+    Deck.create!({
+      title: "Circles",
+      description: "The shape with no corner",
+      subject_id: 31
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 150
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 150
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 150
+      })
+    Deck.create!({
+      title: "3D Objects",
+      description: "Enter another dimension",
+      subject_id: 31
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 151
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 151
+      })
+      Card.create!({
+        question: "question",
+        answer: "answer",
+        deck_id: 151
+      })
 
 
 User.all.each do |user|

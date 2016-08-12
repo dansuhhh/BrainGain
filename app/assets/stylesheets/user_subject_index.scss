@@ -1,10 +1,9 @@
 .user-subject-index {
-  width: 300px;
-  min-height: 500px;
+  width: 21%;
   float: left;
   display: flex;
   flex-direction: column;
-  background-color: #F2F2F2;
+  background-color: #F5F5F5;
   border-right: 3px solid #E8E8E8;
 }
 
@@ -18,16 +17,20 @@
 
 .user-subject-list {
   list-style: none;
-  background-color: #F2F2F2;
-  color: #28B5DC;
+  color: #55B7E3;
   padding-left: 15px;
 }
 
 .user-subject-list-item {
   border-bottom: 1px solid #E8E8E8;
-  width: auto;
+  width: 90%;
   padding: 15px;
   float: left;
+  cursor: pointer;
+}
+
+.user-subject-list-item:hover {
+  background-color: #EEEEEE;
 }
 
 .index-subject-thumb {
@@ -39,4 +42,9 @@
 .user-subject-list-item a {
   text-decoration: none;
   float: left;
+}
+
+.user-subject-list-item a:active {
+  text-decoration: underline;
+  color: #29A5DC;
 }

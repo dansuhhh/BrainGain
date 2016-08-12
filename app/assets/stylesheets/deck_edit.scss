@@ -7,51 +7,86 @@
     color: #FE8A47;
   }
 
-  .column-headers {
-    font-weight: bold;
-    text-align: left;
-    border-bottom: 3px solid #E8E8E8;
+  .deck-edit-table {
+    border-collapse: collapse;
+    .column-headers {
+      font-weight: bold;
+      text-align: left;
+      th {
+        padding: 7px;
+      }
+    }
+    tbody > tr:first-child {
+      border-top: 3px solid #E8E8E8;
+    }
+    tbody > tr {
+      border-bottom: 1px solid #E8E8E8;
+      td {
+        padding: 7px;
+      }
+    }
+    td > input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 7px;
+    }
+
+
+    .deck-edit-col-1 {
+      width: 100px;
+    }
+
+    .deck-edit-col-2 {
+      width: 500px;
+    }
+
+    .deck-edit-col-3 {
+      width: 500px;
+    }
+    .deck-edit-col-4 {
+      width: 50px;
+      a {
+        background-color: #D9534F;
+        border-radius: 3px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        p {
+          transform: rotate(45deg);
+          font-size: 14px;
+          line-height: 0px;
+        }
+      }
+    }
+    .add-row:before {
+      content: "+";
+      float: left;
+      margin-right: 5px;
+      color: white;
+      background-color: #29A5DC;
+      border-radius: 50%;
+      width: 16px;
+      line-height: .9;
+      display: flex;
+      justify-content: center;
+      height: 16px;
+    }
+    .add-row {
+      cursor:pointer;
+      color: #29A5DC;
+    }
   }
-  tbody > tr {
-    border-bottom: 1px solid #E8E8E8;
-  }
-  td > input {
-    width: 100%;
-  }
-
-}
-
-.deck-edit-col-1 {
-  width: 100px;
-}
-
-.deck-edit-col-2 {
-  width: 500px;
-}
-
-.deck-edit-col-3 {
-  width: 500px;
-}
-
-.deck-edit-col-4 {
-  width: 50px;
-  a {
-    width: 100%;
-    background-color: #D9534F;
-    border-radius: 3px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-  }
-}
-
-.add-row {
-  cursor:pointer;
-}
-
-.deck-edit-buttons {
-  float: right;
-  a {
+  .save {
+    float: right;
     margin: 5px;
+    background-color: #29A5DC;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: 300;
   }
 }

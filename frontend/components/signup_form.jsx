@@ -58,7 +58,8 @@ const SignupForm = React.createClass({
     return(
       <div className="auth-page">
         <article className="auth-form-article">
-          <h4 className="auth-header">Sign Up</h4>
+          <a className="login-logo"></a>
+          <h2 className="auth-header">Sign Up</h2>
           {errorList}
           <form onSubmit={this.handleSubmit}>
             <input
@@ -71,15 +72,15 @@ const SignupForm = React.createClass({
               type="password"
               placeholder="Password"
               onChange={this.updatePassword}/>
-            <input type="submit"/>
+            <input type="submit" value="Sign Up"/>
           </form>
         </article>
-        // <div className="cf">
-        //   <a href="#" className="image1" />
-        //   <a href="#" className="image2" />
-        //   <a href="#" className="image3" />
-        //   <a href="#" className="image4" />
-        // </div>
+        <div className="cf">
+          <a href="#" className="image1" />
+          <a href="#" className="image2" />
+          <a href="#" className="image3" />
+          <a href="#" className="image4" />
+        </div>
       </div>
     );
   }
