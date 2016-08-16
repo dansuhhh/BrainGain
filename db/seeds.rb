@@ -1,26 +1,35 @@
-# require 'csv'
-#
-# csv_text = File.read(Rails.root.join('lib', 'seeds', 'braingain_seeds.csv'))
-# csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-# csv.each do |row|
-#   t = Transaction.new
-#   t.street = row['street']
-#   t.city = row['city']
-#   t.zip = row['zip']
-#   t.zip = row['zip']
-#   t.state = row['state']
-#   t.beds = row['beds']
-#   t.sq_feet = row['sq_feet']
-#   t.category = row['type']
-#   t.sale_date = row['sale_date']
-#   t.price = row['price']
-#   t.lat = row['latitude']
-#   t.lng = row['longitude']
-#   t.save
-#   puts "#{t.street}, #{t.city} saved"
-# end
-#
-# puts "There are now #{Transaction.count} rows in the transactions table"
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'braingain_seeds.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+
+subject_id = 0
+deck_id = 0
+csv.each do |row|
+  if row['username'] == ""
+    #deck conditional
+    #card create
+  else
+  end
+
+    # t = Transaction.new
+    # t.street = row['street']
+    # t.city = row['city']
+    # t.zip = row['zip']
+    # t.zip = row['zip']
+    # t.state = row['state']
+    # t.beds = row['beds']
+    # t.sq_feet = row['sq_feet']
+    # t.category = row['type']
+    # t.sale_date = row['sale_date']
+    # t.price = row['price']
+    # t.lat = row['latitude']
+    # t.lng = row['longitude']
+    # t.save
+
+
+
+
 
 User.destroy_all
 Subject.destroy_all

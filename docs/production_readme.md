@@ -3,78 +3,116 @@
 [Heroku link][heroku]
 [heroku]: http://www.braingain.herokuapp.com
 
-BrainGain is a full-stack web application inspired by Brainscape. The application runs a Ruby on Rails backend, a PostgreSQL database, and a  React.js frontend with a Flux architectural framework.
+## Minimum Viable Product
 
-## Features & Implementation
+BrainGain is a web application inspired by Brainscape that will be built using Ruby on Rails and React.js.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria:
 
-### Single-Page Application
+- [X] Hosting on Heroku
+- [X] New account creation, login, and guest/demo login
+- [X] A production README, replacing this README
+- [X] Subjects
+ - [X] Create and delete personal subjects
+ - [ ] View and add other subjects to personal library
+ - [X] Navigate through added subjects to view decks and cards
+ - [X] Upload personal image as subject avatar
+- [X] Decks
+ - [X] Create, edit, and delete decks
+ - [X] Create, edit, and delete cards within deck edit
+ - [X] View user's learning progress
+- [X] Study mode
+ - [X] Recursively iterate through cards until deck is fully mastered
+ - [X] View progress of learning a deck
+ - [X] Accurate flipping behavior of a typical flashcard
+- [ ] Search
+ - [ ] Search through all subjects
+ - [ ] Accurate search predictions/recommendations
+ - [ ] Constant rendering of predictions based on user input
 
-BrainGain is fundamentally a single-page application. The root static page listens to a `SessionStore` and renders all content based on a call to `SessionStore.currentUser()`. The frontend makes an API call to
-`SessionsController#create` and therefore does not reveal any private information.
+## Design Docs
+* [View Wireframes][views]
+* [React Components][components]
+* [Flux Cycles][flux-cycles]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
 
-```ruby
-class Api::SessionsController < ApplicationController
-  def create
-    @user = User.find_by_credentials(
-      params[:user][:username],
-      params[:user][:password]
-    )
-    if @user
-      login(@user)
-      render "api/users/show"
-    else
-      render json: ['Invalid credentials'], status: 401
-    end
-  end
-end
-  ```
+[views]: views.md
+[components]: components.md
+[flux-cycles]: flux-cycles.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
 
-### Subjects, Decks, and Cards
+## Implementation Timeline
 
-  Each of these models are stored on their own table in the database. Subjects have a `title` and `author_id`, decks have a `title`, `description` and `subject_id`, and cards have a `question`, `answer`, and `deck_id`. Depending on the component rendered, API calls are made to store data on the frontend.
+### Phase 1: Backend setup and Front End User Authentication (2 days, W1 W 6pm)
 
-  The user's person `Library` component renders the `UserSubjectIndex`, which renders `UserSubjectDetail` and `UserDeckIndex` according to the subject selected.
+**Objective:** Functioning rails project with front-end Authentication
 
-![image of library](library.png)
+- [X] create new project
+- [X] create `User` model
+- [X] authentication backend setup
+- [X] create `StaticPages` controller and root view
+- [X] set up webpack & flux scaffold with skeleton files
+- [X] setup `APIUtil` to interact with the API
+- [X] set up flux cycle for frontend auth
+- [X] user signup/signin components
+- [X] blank landing component after signin
+- [X] style signin/signup components
+- [X] seed users
 
-### Masteries
+### Phase 2: Subjects Model, API, and components (2 days, W1 F 6pm)
 
-Users must see their recorded level of mastery for each card they view. Masteries include a `user_id` and `card_id`, which are unique as a pair. They also include a mastery value ranging from 1 to 5, with 0 as a default value.
+**Objective:** Subjects can be created, read, and destroyed through
+the API.
 
-As users interact with the flashcard study environment, they should be able to choose their level of comfort (mastery), and also view their progress in mastering the deck. Along with a respective table on the database, masteries also have a `MasteryStore` for the current deck.
+- [X] create library component, only accessible if logged in, otherwise redirect to homepage
+- [X] create navbar with auth handling buttons
+- [X] create `Subject` model
+- [X] seed the database with a small amount of test data
+- [X] CRUD API for subjects (`SubjectsController`)
+- [X] jBuilder views for subjects
+- [X] test out API interaction in the console.
+- implement each subject component, building out the flux loop as needed.
+ - [X] `SubjectIndex`
+ - [X] `SubjectIndexItem`
+ - [X] `SubjectForm`
+- [X] refactor to separate Subjects into Public and User's Subjects
+- [X] error handling
+- [X] style subjects components
+- [X] implement image upload for subject avatar
+- [X] BONUS: add image column (gem paperclip) to subjects
 
-`MasteryStore` method for collecting a user's mastery of a card:
+### Phase 3: Decks & Cards (2 day, W2 Tu 6pm)
 
-```javascript
-MasteryStore.ofCard = (cardId) => {
-  let mastery;
-  Object.keys(_masteries).forEach( key => {
-    if (_masteries[key].card_id === parseInt(cardId)) {
-      mastery = _masteries[key];
-    }
-  });
-  return mastery;
-};
-```
+**Objective:** Decks belong to Subjects, and can be viewed by subject. Cards belong to Decks, and can be viewed by deck.
 
-### Flashcards
+- [X] create `Deck` model
+- build out API, Flux loop, and components for:
+ - [X] Deck CRUD
+ - [X] adding decks requires a subject
+ - [X] viewing decks by subject
+- [X] Use CSS to style new components
+- [X] Seed Decks
+- [X] create `Card` model
+- build out API, Flux loop, and components for:
+ - [X] Card CRUD
+ - [X] adding cards requires a deck
+ - [X] editing cards requires a deck
+ - [X] viewing cards by deck
+- [X] Use CSS to style new components
+- [X] Seed Cards
 
-In a `Study` component, users will enter a dynamic experience in which a `Flashcard` component will render through cards in a deck. The user can choose a level of confidence in mastering a card, and see his/her mastery progress in the `DeckMastery` as the flashcards are studied.
+### Phase 4: - Flashcard flipping for Study (1 day, W2 W 6pm)
 
-With each flashcard viewed and rated, the `Flashcard` will send an API call to edit the mastery level of the current user and the current card. The `DeckMastery` will listen to the `MasteryStore` and update the progress.
+**objective:** Add flashcard manipulation to cards in study view
 
-![image of flashcard question](studyQ.png)
+- [X] Pair flip button with question side of card and user prompt with answer side of card
+- [X] Use CSS to achieve flashcard behavior
+- [X] Create algorithm to show the user the progress of mastering a deck
 
-![image of flashcard answer](studyA.png)
+### Phase 5: Search (2 days, W2 F 6pm)
 
-## Future Directions
+**Objective:** Search will show predicted Subjects. Entering search text will show all similar Decks.
 
-I plan to continue working on improving and expanding this application in the following ways:
-
-### Subscriptions
-
-Users should be able to subscribe to one another's subjects. With a subscriptions join table in the database between users and subjects, a user should be able to study personally-created and subscribed subjects.
-
-### Search
-
-As the database expands and the number of subjects/decks/cards increases, a search bar will greatly improve the user experience. The search component will go through all public subject titles and render a list of subjects along with deck and card count information.
+- [ ] Render predicted searches with each change
+- [ ] Allow clickable on prediction dropdown
+- [ ] Render similar deck results if search bar is entered
