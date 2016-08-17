@@ -1,16 +1,16 @@
-require 'csv'
-
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'braingain_seeds.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-
-subject_id = 0
-deck_id = 0
-csv.each do |row|
-  if row['username'] == ""
-    #deck conditional
-    #card create
-  else
-  end
+# require 'csv'
+#
+# csv_text = File.read(Rails.root.join('lib', 'seeds', 'braingain_seeds.csv'))
+# csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+#
+# subject_id = 0
+# deck_id = 0
+# csv.each do |row|
+#   if row['username'] == ""
+#     #deck conditional
+#     #card create
+#   else
+#   end
 
     # t = Transaction.new
     # t.street = row['street']
