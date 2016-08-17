@@ -1,19 +1,24 @@
 {
   "name": "BrainGain",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "[braingain.herokuapp.com][heroku]",
+  "main": "brain_gain.jsx",
   "directories": {
+    "doc": "docs",
     "test": "test"
   },
   "scripts": {
-    "webpack":"webpack",
-    "postinstall": "./node_modules/.bin/webpack"
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dansuhhh/braingain.git"
   },
   "engines": {
     "node": "6.3.0",
     "npm": "3.10.3"
   },
+  "homepage": "braingain.herokuapp.com",
   "keywords": [],
   "author": "",
   "license": "ISC",
