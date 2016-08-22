@@ -41,21 +41,21 @@ const PublicSubjectDetail = React.createClass({
             {/*<a>Subscribe</a>*/}
           </header>
           <section>
-            <h3>DeckList</h3>
+            <h3>Deck List</h3>
             <table>
               <thead>
                 <tr className="column-headers">
-                  <th className="deck-edit-col-1">#</th>
-                  <th className="deck-edit-col-2">Deck Name</th>
-                  <th className="deck-edit-col-3">Num of Cards</th>
+                  <th className="deck-col-1">#</th>
+                  <th className="deck-col-2">Deck Name</th>
+                  <th className="deck-col-3">Num of Cards</th>
                 </tr>
               </thead>
               <tbody>
                 { this.state.subject.decks.map( (deck, index) => {
                     return (<tr key={index}>
-                      <td>{`${index + 1}`}</td>
-                      <td>{`${deck.deck_title}`}</td>
-                      <td>{`${deck.card_count}`}</td>
+                      <td className="deck-col-1">{`${index + 1}`}</td>
+                      <td className="deck-col-2">{`${deck.deck_title}`}</td>
+                      <td className="deck-col-3">{`${deck.card_count}`}</td>
                     </tr>);
                   })
                 }

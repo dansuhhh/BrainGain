@@ -38,4 +38,41 @@
 .public-subject-detail-page section {
   width: 100%;
   padding: 45px 5%;
+  background-color: #FEFEFE;
+  color: #333333;
+  h3 {
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  table {
+    border-collapse: collapse;
+    .deck-col-1 {
+      width: 60px;
+      text-align: center;
+    }
+    .deck-col-2 {
+      width: 345px;
+      text-align: left;
+    }
+    .deck-col-3 {
+      width: 120px;
+      text-align: right;
+    }
+    thead {
+      th {
+        padding: 10px;
+        border-bottom: 2px solid #DDDDDD;
+      }
+    }
+    tbody {
+      tr:nth-child(odd) {
+        background-color: #F9F9F9;
+      }
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #DDDDDD;
+      }
+    }
+  }
 }
