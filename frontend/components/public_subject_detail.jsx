@@ -5,6 +5,7 @@ const PublicSubjectDetail = React.createClass({
     return(
       <div>
         {this.props.params.subjectId}
+
       </div>
     );
   }

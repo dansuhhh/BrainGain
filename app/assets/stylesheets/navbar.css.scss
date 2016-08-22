@@ -47,7 +47,7 @@
 }
 
 .navbar-logout {
-  background-color: #55B7E3;
+  background-color: #29A5DC;
   color: white;
   text-align: center;
   width: 100px;
@@ -57,6 +57,10 @@
   line-height: 30px;
   margin-top: 10px;
   margin-left: 15px;
+}
+
+.navbar-logout:hover {
+  background-color: #55B7E3;
 }
 
 .greet {
