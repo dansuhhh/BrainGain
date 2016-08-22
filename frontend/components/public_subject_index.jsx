@@ -28,7 +28,9 @@ const PublicSubjectIndex = React.createClass({
     if (this.state.subjects){
       subjectList = this.state.subjects.map( subject => {
         return (<li key={subject.id} className="public-subject-item">
-              {subject.title}
+              <Link to={`subjects/${subject.id}`}>
+                {`${subject.title}`}
+              </Link>
           </li>);
       });
     }

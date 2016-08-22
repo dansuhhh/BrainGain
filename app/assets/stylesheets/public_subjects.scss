@@ -33,3 +33,8 @@
 .public-subjects-section ul li {
   margin: 3px;
 }
+
+.public-subjects-section ul li:hover {
+  color: #1A769F;
+  text-decoration: underline;
+}

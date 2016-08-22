@@ -1,6 +1,10 @@
 const React = require('react');
 
 const PublicSubjectDetail = React.createClass({
+  getInitialState() {
+    return { subject: {} };
+  },
+
   render() {
     return(
       <div>
