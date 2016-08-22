@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :decks, except: [:new, :edit]
     resources :cards, except: [:new, :edit]
     resources :masteries, except: [:new, :edit]
+    get 'public_subjects/:id', :to => 'subjects#public_show'
   end
 
 

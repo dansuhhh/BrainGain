@@ -15,6 +15,10 @@ const SubjectActions = {
     SubjectApiUtil.getSubject(id, SubjectActions.receiveSubject);
   },
 
+  getPublicSubject(id){
+    SubjectApiUtil.getPublicSubject(id, SubjectActions.receiveSubject);
+  },
+
   updateSubject(formData){
     SubjectApiUtil.updateSubject(formData, SubjectActions.receiveSubject);
   },

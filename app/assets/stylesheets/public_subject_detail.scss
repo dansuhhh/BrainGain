@@ -1,0 +1,41 @@
+.public-subject-detail-page header {
+  height: 305px;
+  width: 100%;
+  padding: 45px 5%;
+  background-image:
+    linear-gradient(
+      to right,
+      #01A8D7, #75D177
+    );
+  img {
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+  div {
+    height: 100%;
+    float: left;
+    margin-left: 15px;
+    border-left: 1px solid #FFFFFF;
+    padding-left: 15px;
+    h1 {
+      color: #FFFFFF;
+      line-height: 1px;
+      font-weight: 200;
+      font-size: 50px;
+    }
+    p {
+      color: #A7EFF1;
+      font-size: 24px;
+      font-weight: 200;
+    }
+  }
+  a {
+    float: right;
+  }
+}
+
+.public-subject-detail-page section {
+  width: 100%;
+  padding: 45px 5%;
+}

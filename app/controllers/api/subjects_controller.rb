@@ -29,6 +29,11 @@ class Api::SubjectsController < ApplicationController
     render "api/subjects/show"
   end
 
+  def public_show
+    @subject = Subject.find(params[:id])
+    render "api/subjects/public_show"
+  end
+
   def destroy
     @subject = Subject.find(params[:id])
     @subject.destroy!

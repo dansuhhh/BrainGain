@@ -49,6 +49,14 @@ module.exports = {
     });
   },
 
+  getPublicSubject(id, success){
+    $.ajax({
+      url: `api/public_subjects/${id}`,
+      type: "GET",
+      success: success
+    });
+  },
+
   removeSubject(id, success){
     $.ajax({
       url: `api/subjects/${id}`,
