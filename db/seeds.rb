@@ -4,6 +4,40 @@ Deck.destroy_all
 Card.destroy_all
 Mastery.destroy_all
 
+# require 'csv'
+#
+# csv_text = File.read(Rails.root.join('lib', 'seeds', 'braingain_seeds.csv'))
+# csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+#
+# author_id = 0
+# subject_id = 0
+# deck_id = 0
+# csv.each do |row|
+#   if row['username'].length > 0
+#     author_id += 1
+#     User.create!({ username: row['username'], password: row['password'] })
+#     next
+#   end
+#   if row['subject_title'].length > 0
+#     subject_id += 1
+#     Subject.create!({ title: row['subject_title'], author_id: author_id })
+#     next
+#   end
+#   if row['deck_title'].length > 0
+#     deck_id += 1
+#     Deck.create!({
+#       title: row['deck_title'],
+#       description: row['deck_description'],
+#       subject_id: subject_id
+#       })
+#     next
+#   end
+#   Card.create!({
+#     question: row['card_question'],
+#     answer: row['card_answer'],
+#     deck_id: deck_id
+#   })
+# end
 
 # User seeds
 User.create!({ username: "john.doe", password: "dandan" }) # id: 1

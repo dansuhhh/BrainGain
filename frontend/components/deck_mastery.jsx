@@ -97,13 +97,30 @@ const DeckMastery = React.createClass({
       <section className="progress">
         <h3>{title}</h3>
         <Link className="done-button" to={`/library`}>Done</Link>
+        <div className="mastery-status">
+          {`${bar5} cards mastered / ${Object.keys(this.state.cards).length} total cards`}
+        </div>
         <ul className="masteries">
-          <li>{"Total cards: " + count}</li>
-          <li>{"Mastery level 1: " + bar1}</li>
-          <li>{"Mastery level 2: " + bar2}</li>
-          <li>{"Mastery level 3: " + bar3}</li>
-          <li>{"Mastery level 4: " + bar4}</li>
-          <li>{"Mastery level 5: " + bar5}</li>
+          <li>
+            <p>1</p>
+            <div style={{backgroundColor:"#AA0080", width:`${ (bar1 / Object.keys(this.state.cards).length * 100) * .95}%`}}></div>
+          </li>
+          <li>
+            <p>2</p>
+            <div style={{backgroundColor: "#FF8A47", width:`${ (bar2 / Object.keys(this.state.cards).length * 100) * .95}%`}}></div>
+          </li>
+          <li>
+            <p>3</p>
+            <div style={{backgroundColor: "#FFDD00", width:`${ (bar3 / Object.keys(this.state.cards).length * 100) * .95}%`}}></div>
+          </li>
+          <li>
+            <p>4</p>
+            <div style={{backgroundColor: "#7FAE2E", width:`${ (bar4 / Object.keys(this.state.cards).length * 100) * .95}%`}}></div>
+          </li>
+          <li>
+            <p>5</p>
+            <div style={{backgroundColor: "#00A8D7", width:`${ (bar5 / Object.keys(this.state.cards).length * 100) * .95}%`}}></div>
+          </li>
         </ul>
       </section>
     );

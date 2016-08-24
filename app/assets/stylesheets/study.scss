@@ -1,5 +1,5 @@
 .study-page {
-  height: 900px;
+  height: 725px;
   section {
     height: 100%;
     float: left;
@@ -24,7 +24,7 @@
 }
 
 .progress {
-  width: 400px;
+  width: 30%;
   background-color: #333333;
   display: flex;
   flex-direction: column;
@@ -44,23 +44,48 @@
   .done-button {
     background-color: #29A5DC;
     color: white;
-    width: 190px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1px;
+    width: 40%;
     height: 45px;
-    padding: 10px;
     margin: 15px;
+    border-radius: 3px;
+  }
+  .mastery-status {
+    background-color: #444444;
+    color: white;
+    margin: 0 auto;
+    padding: 10%;
+    width: 90%;
+    height: 90px;
   }
   .masteries {
     list-style: none;
     color: white;
     font-weight: 200;
+    padding: 10%;
     li {
+      background-color: #444444;
       margin: 10px 0;
+      height: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      p {
+        background-color: #333333;
+        width: 5%;
+        height: 100%;
+      }
+      div {
+        height: 100%;
+      }
     }
   }
 }
 .flashcard-section {
-  width: 960px;
+  width: 65%;
   padding: 65px;
   perspective: 1000;
   -webkit-perspective: 1000;
@@ -75,13 +100,13 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     width: 100%;
-    height: 580px;
+    height: 100%;
   }
 
   .flashcard {
     position: relative;
     width: 100%;
-    height: 580px;
+    height: 75%;
     border: 1px solid #DADADA;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
@@ -112,18 +137,33 @@
   }
   .mastery-choices {
     background-color: #29A5DC;
-    width: 95%;
+    width: 100%;
     list-style: none;
-    float: left;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
     li {
-      background-color: #29A5DC;
-      width: 19%;
+      width: 20%;
       color: white;
       padding: 10px 0;
       cursor: pointer;
       height: 100%;
-      float: left;
       text-align: center;
+    }
+    li:nth-of-type(1){
+      background-color: #AA0080;
+    }
+    li:nth-of-type(2){
+      background-color: #FF8A47;
+    }
+    li:nth-of-type(3){
+      background-color: #FFDD00
+    }
+    li:nth-of-type(4){
+      background-color: #7FAE2E;
+    }
+    li:nth-of-type(5){
+      background-color: #00A8D7;
     }
   }
 }
