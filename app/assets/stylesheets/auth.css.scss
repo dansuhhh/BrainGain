@@ -45,7 +45,13 @@
       text-align: center;
       line-height: 45px;
       border-radius: 8px;
+      cursor: pointer;
     }
+    input[type="submit"]:hover {
+      background-color: #55B7E3;
+
+    }
+
     a {
       cursor: pointer;
       color: #29A5DF;

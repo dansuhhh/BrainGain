@@ -66,4 +66,11 @@
 .greet {
   float: right;
   font-size: 18px;
+  cursor: default;
+}
+
+.greet:hover {
+  color: #666666;
+  cursor: default;
+
 }

@@ -60,6 +60,9 @@
           line-height: 0px;
         }
       }
+      a:hover {
+        background-color: #C9302C;
+      }
     }
     .add-row:before {
       content: "+";
@@ -78,6 +81,10 @@
       cursor:pointer;
       color: #29A5DC;
     }
+    .add-row:hover {
+      color: #1A7EAD;
+      text-decoration: underline;
+    }
   }
   .save {
     float: right;
@@ -88,5 +95,8 @@
     text-align: center;
     padding: 15px;
     font-weight: 300;
+  }
+  .save:hover {
+    background-color: #1E86B4;
   }
 }

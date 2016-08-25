@@ -53,6 +53,9 @@
     margin: 15px;
     border-radius: 3px;
   }
+  .done-button:hover {
+    background-color: #55B7E3;
+  }
   .mastery-status {
     background-color: #444444;
     color: white;
@@ -157,7 +160,7 @@
       background-color: #FF8A47;
     }
     li:nth-of-type(3){
-      background-color: #FFDD00
+      background-color: #FFDD00;
     }
     li:nth-of-type(4){
       background-color: #7FAE2E;
