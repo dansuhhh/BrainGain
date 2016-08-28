@@ -14,23 +14,37 @@
     font-size: 34px;
   }
   .search-bar {
-    width: 950px;
+    width: 820px;
+    color: #DDDDDD;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    input:focus {
+      outline: none;
+    }
     input {
-      float: left;
       width: 80%;
-      color: #DDDDDD;
-      padding: 23px 30px;
-      background: rgba(0,0,0,0.5);
+      padding: 20px 20px;
       font-size: 32px;
     }
-    a {
-      float: left;
-      background: rgba(0,0,0,0.75);
-      font-size: 23px;
-      text-align: center;
-      width: 20%;
-      padding: 28px;
-      color: #0871B9;
+    ul {
+      position: absolute;
+      top: 78px;
+      left: 115px;
+      list-style: none;
+      background-color: #DDDDDD;
+      color: #55B7E3;
+      li {
+        padding: 15px;
+        width: 500px;
+      }
+      li:hover {
+        color: #1A769F;
+        text-decoration: underline;
+      }
     }
   }
   h3 {

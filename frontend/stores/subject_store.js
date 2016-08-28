@@ -25,6 +25,16 @@ SubjectStore.subscribed = () => {
   return subjects;
 };
 
+SubjectStore.search = (string) => {
+  let subjects = [];
+  Object.keys(_subjects).forEach( key => {
+    if (_subjects[key].title.toLowerCase().includes(string.toLowerCase())){
+      subjects.push(_subjects[key]);
+    }
+  });
+  return subjects;
+};
+
 SubjectStore.find = (id) => {
   return _subjects[id];
 };
