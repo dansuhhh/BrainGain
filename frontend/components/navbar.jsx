@@ -33,34 +33,27 @@ const Navbar = React.createClass({
   },
 
   render(){
-    let libraryTag;
-    let logOutButton;
-    let greet;
     if (SessionStore.isUserLoggedIn()){
-      libraryTag =
-        <Link
-          to="library"
-          className="navbar-link">
-          My Library
-        </Link>;
-      logOutButton =
-        <a
-          className="navbar-logout"
-          onClick={this.handleLogOutClick}>
-          Log Out
-        </a>;
-      greet = <a className="navbar-link greet">{this.state.user.username}</a>;
-    }
-    return(
-      <nav className="group main-nav-bar">
+      return (<nav className="group main-nav-bar">
         <a href="#" className="brain-image"></a>
         <a href="#" className="logo-name">GAIN</a>
-        {libraryTag}
+        <Link to="library" className="navbar-link">
+          My Library
+        </Link>
         <a href="#" className="navbar-link">FlashCards</a>
-        {logOutButton}
-        {greet}
-      </nav>
-    );
+        <a className="navbar-logout" onClick={this.handleLogOutClick}>
+          Log Out
+        </a>
+        <a className="navbar-link greet">{this.state.user.username}</a>
+      </nav>);
+    } else {
+        return (<nav className="group main-nav-bar">
+          <a href="#" className="brain-image"></a>
+          <a href="#" className="logo-name">GAIN</a>
+          <a href="#" className="navbar-link">FlashCards</a>
+          <Link to="session/new" className="navbar-logout">Log In</Link>
+        </nav>);
+    }
   }
 });
 

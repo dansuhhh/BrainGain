@@ -19,21 +19,21 @@ const Study = require('./components/study');
 
 const _ensureLoggedIn = (nextState, replace) => {
   if (!SessionStore.isUserLoggedIn()){
-    replace("/session/new");
+    replace("session/new");
   }
 };
 
 const routes = (
   <Route path="/" component={ App }>
-    <IndexRoute onEnter={ _ensureLoggedIn } component={ Main }/>
+    <IndexRoute component={ Main }/>
     <Route path="users/new" component={ SignupForm }/>
     <Route path="session/new" component={ LoginForm }/>
     <Route path="library" component={ Library } onEnter={ _ensureLoggedIn }>
-      <Route path=":subjectId" component={ UserSubjectDetail } />
+      <Route path=":subjectId" component={ UserSubjectDetail } onEnter={ _ensureLoggedIn } />
     </Route>
-    <Route path="decks/:deckId" component={ DeckEditForm } />
+    <Route path="decks/:deckId" component={ DeckEditForm } onEnter={ _ensureLoggedIn } />
     <Route path="subjects/:subjectId" component={ PublicSubjectDetail } />
-    <Route path="study/:deckId" component={ Study } />
+    <Route path="study/:deckId" component={ Study } onEnter={ _ensureLoggedIn } />
   </Route>
 );
 

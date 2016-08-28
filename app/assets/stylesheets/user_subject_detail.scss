@@ -29,6 +29,9 @@
         left: 0;
         right: 0;
       }
+      input:hover {
+        cursor:pointer;
+      }
       .thumbnail-edit {
         background-image: image-url("thumb-edit.png");
         background-size: contain;
@@ -48,6 +51,9 @@
     padding: 5px;
     color: white;
     cursor: pointer;
+  }
+  .delete-button:hover {
+    background-color: #1A769F;
   }
 }
 
