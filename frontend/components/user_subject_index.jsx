@@ -7,7 +7,7 @@ const hashHistory = require('react-router').hashHistory;
 
 const UserSubjectIndex = React.createClass({
   getInitialState(){
-    return { subjects: SubjectStore.subscribed() };
+    return { subjects: SubjectStore.owned() };
   },
 
   componentDidMount(){
@@ -21,7 +21,7 @@ const UserSubjectIndex = React.createClass({
 
   handleSubjectChange(){
     this.setState({
-      subjects: SubjectStore.subscribed()
+      subjects: SubjectStore.owned()
     });
   },
 

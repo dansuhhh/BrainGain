@@ -14,7 +14,7 @@ SubjectStore.all = () => {
   return subjects;
 };
 
-SubjectStore.subscribed = () => {
+SubjectStore.owned = () => {
   let subjects = [];
   let currentUserId = SessionStore.currentUser().id
   Object.keys(_subjects).forEach( key => {
