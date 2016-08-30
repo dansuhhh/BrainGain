@@ -24,6 +24,10 @@ SubscriptionStore.ofSubject = (subjectId) => {
   return subscription;
 };
 
+SubscriptionStore.isOwned = subscription => {
+  return (subscription.author_id === SessionStore.currentUser().id);
+};
+
 SubscriptionStore.find = (id) => {
   return _subscriptions[id];
 };

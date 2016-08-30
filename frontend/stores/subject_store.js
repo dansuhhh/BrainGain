@@ -16,7 +16,7 @@ SubjectStore.all = () => {
 
 SubjectStore.owned = () => {
   let subjects = [];
-  let currentUserId = SessionStore.currentUser().id
+  let currentUserId = SessionStore.currentUser().id;
   Object.keys(_subjects).forEach( key => {
     if (_subjects[key].author_id === currentUserId){
       subjects.push(_subjects[key]);

@@ -135,3 +135,13 @@ User.all.each do |user|
     })
   end
 end
+
+User.all.each do |user|
+  Subject.all.each do |subject|
+    Subscription.create!({
+      user_id: user.id,
+      subject_id: subject.id,
+      flag: false
+    })
+  end
+end

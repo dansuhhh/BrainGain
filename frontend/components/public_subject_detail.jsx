@@ -1,19 +1,24 @@
 const React = require('react');
 const SubjectActions = require('../actions/subject_actions');
 const SubjectStore = require('../stores/subject_store');
+const SubscriptionActions = require('../actions/subscription_actions');
+const SubscriptionStore = require('../stores/subscription_store');
 
 const PublicSubjectDetail = React.createClass({
   getInitialState() {
-    return { subject: null };
+    return { subject: null, subscription: null };
   },
 
   componentDidMount() {
     this.subjectListener = SubjectStore.addListener(this.handleSubjectChange);
+    this.subscriptionListener = SubscriptionStore.addListener(this.handleSubscriptionChange);
     SubjectActions.getPublicSubject(this.props.params.subjectId);
+    SubscriptionActions.fetchAllSubscriptions();
   },
 
   componentWillUnmount() {
     this.subjectListener.remove();
+    this.subscriptionListener.remove();
   },
 
   handleSubjectChange() {
@@ -22,13 +27,31 @@ const PublicSubjectDetail = React.createClass({
     });
   },
 
+  handleSubscriptionChange() {
+    this.setState({
+      subscription: SubscriptionStore.ofSubject(this.props.params.subjectId)
+    });
+  },
+
   componentWillReceiveProps(newProps) {
     SubjectActions.getPublicSubject(newProps.params.subjectId);
+    this.setState({
+      subscription: SubscriptionStore.ofSubject(newProps.params.subjectId)
+    });
   },
 
 
   render() {
-    let subject_decks;
+    let subscribeBtn;
+    if (this.state.subscription){
+      if (SubscriptionStore.isOwned(this.state.subscription)){
+        subscribeBtn = <a>"Owned"</a>;
+      } else if (this.state.subscription === false){
+        subscribeBtn = <a>"Subscribe"</a>;
+      } else {
+        subscribeBtn = <a>"Unsubscribe"</a>;
+      }
+    }
     if (this.state.subject){
       return(
         <main className="public-subject-detail-page">
@@ -38,7 +61,7 @@ const PublicSubjectDetail = React.createClass({
               <h1>{this.state.subject.title}</h1>
               <p>Authored by {this.state.subject.author_name}</p>
             </div>
-            {/*<a>Subscribe</a>*/}
+            {subscribeBtn}
           </header>
           <section>
             <h3>Deck List</h3>
