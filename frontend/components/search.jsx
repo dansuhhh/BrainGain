@@ -9,7 +9,7 @@ const Search = React.createClass({
     return { subjects: [], search: "" };
   },
 
-  componontDidMount(){
+  componentDidMount(){
     this.subjectListener = SubjectStore.addListener(this.handleSubjectsChange);
     SubjectActions.fetchAllSubjects();
   },
