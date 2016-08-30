@@ -83,7 +83,7 @@ const LoginForm = React.createClass({
             <input type="submit" value="Log In"/>
           </form>
           <Link to="/users/new">Sign Up</Link>
-          <a onClick={this.guestLogin}>I&#39;m just a guest</a>
+          <a onClick={this.guestLogin}>Guest Login</a>
         </article>
         <div className="cf">
           <a href="#" className="image1" />
