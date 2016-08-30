@@ -3,6 +3,7 @@ const SubjectActions = require('../actions/subject_actions');
 const SubjectStore = require('../stores/subject_store');
 const SubscriptionActions = require('../actions/subscription_actions');
 const SubscriptionStore = require('../stores/subscription_store');
+const SessionStore = require('../stores/session_store');
 
 const PublicSubjectDetail = React.createClass({
   getInitialState() {
@@ -12,8 +13,11 @@ const PublicSubjectDetail = React.createClass({
   componentDidMount() {
     this.subjectListener = SubjectStore.addListener(this.handleSubjectChange);
     this.subscriptionListener = SubscriptionStore.addListener(this.handleSubscriptionChange);
-    SubjectActions.getPublicSubject(this.props.params.subjectId);
-    SubscriptionActions.fetchAllSubscriptions();
+    this.id = this.props.params.subjectId;
+    SubjectActions.getPublicSubject(this.id);
+    if (SessionStore.isUserLoggedIn()){
+      SubscriptionActions.fetchAllSubscriptions();
+    }
   },
 
   componentWillUnmount() {
@@ -23,7 +27,7 @@ const PublicSubjectDetail = React.createClass({
 
   handleSubjectChange() {
     this.setState({
-      subject: SubjectStore.find(this.props.params.subjectId)
+      subject: SubjectStore.find(this.id)
     });
   },
 
@@ -34,7 +38,8 @@ const PublicSubjectDetail = React.createClass({
   },
 
   componentWillReceiveProps(newProps) {
-    SubjectActions.getPublicSubject(newProps.params.subjectId);
+    this.id = newProps.params.subjectId;
+    SubjectActions.getPublicSubject(this.id);
     this.setState({
       subscription: SubscriptionStore.ofSubject(newProps.params.subjectId)
     });
@@ -43,10 +48,10 @@ const PublicSubjectDetail = React.createClass({
 
   render() {
     let subscribeBtn;
-    if (this.state.subscription){
-      if (SubscriptionStore.isOwned(this.state.subscription)){
+    if (SessionStore.isUserLoggedIn() && this.state.subscription){
+      if (SubjectStore.owned().includes(this.state.subject)){
         subscribeBtn = <a>"Owned"</a>;
-      } else if (this.state.subscription === false){
+      } else if (this.state.subscription.flag === false){
         subscribeBtn = <a>"Subscribe"</a>;
       } else {
         subscribeBtn = <a>"Unsubscribe"</a>;
