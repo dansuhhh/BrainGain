@@ -27,4 +27,7 @@ class Subject < ActiveRecord::Base
     through: :cards,
     source: :masteries
   )
+
+  has_many :subscriptions
+  
 end

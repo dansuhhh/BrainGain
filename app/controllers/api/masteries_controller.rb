@@ -1,5 +1,4 @@
 class Api::MasteriesController < ApplicationController
-
   def index
     @masteries = Mastery.where(user_id: current_user.id)
     render "api/masteries/index"
