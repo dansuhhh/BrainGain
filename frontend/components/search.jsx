@@ -1,7 +1,6 @@
 const React = require('react');
 const SubjectActions = require('../actions/subject_actions');
 const SubjectStore = require('../stores/subject_store');
-const FontAwesome = require('react-fontawesome');
 const Link = require('react-router').Link;
 
 const Search = React.createClass({
