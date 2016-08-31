@@ -43,7 +43,7 @@ const Search = React.createClass({
       <section className="search">
         <h1>What would you like to learn today?</h1>
           <article className="group search-bar">
-            <FontAwesome className="search-icon" name='search' size="2x"/>
+            <i className="fa fa-search fa-2x" aria-hidden="true"></i>
             <input
               className="search-list"
               type="text"
