@@ -1,4 +1,5 @@
 const React = require('react');
+const Link = require('react-router').Link;
 const SubjectActions = require('../actions/subject_actions');
 const SubjectStore = require('../stores/subject_store');
 const SubscriptionActions = require('../actions/subscription_actions');
@@ -45,28 +46,45 @@ const PublicSubjectDetail = React.createClass({
     });
   },
 
+  subscribe(){
+    SubscriptionActions.updateSubscription({id: this.state.subscription.id, flag: true});
+  },
+
+  unsubscribe(){
+    SubscriptionActions.updateSubscription({id: this.state.subscription.id, flag: false});
+  },
 
   render() {
     let subscribeBtn;
+    let prompt;
     if (SessionStore.isUserLoggedIn() && this.state.subscription){
       if (SubjectStore.owned().includes(this.state.subject)){
-        subscribeBtn = <a>"Owned"</a>;
+        subscribeBtn = <a className="subscribe-btn-null">Your subject</a>;
+        prompt = <p>The subject was created by you.</p>;
       } else if (this.state.subscription.flag === false){
-        subscribeBtn = <a>"Subscribe"</a>;
+        subscribeBtn = <a onClick={this.subscribe}>Subscribe</a>;
+        prompt = <p>The subject will be automatically added to your library</p>;
       } else {
-        subscribeBtn = <a>"Unsubscribe"</a>;
+        subscribeBtn = <a onClick={this.unsubscribe}>Unsubscribe</a>;
+        prompt = <p>The subject will be automatically removed from your library</p>;
       }
+    } else {
+      subscribeBtn = <Link to="session/new">Get Started</Link>;
+      prompt = <p>The subject will be automatically added to your library</p>;
     }
     if (this.state.subject){
       return(
         <main className="public-subject-detail-page">
           <header>
             <img src={`${this.state.subject.image_url}`}/>
-            <div>
+            <div className="public-subject-info">
               <h1>{this.state.subject.title}</h1>
               <p>Authored by {this.state.subject.author_name}</p>
             </div>
-            {subscribeBtn}
+            <div className="subscribe-btn-window">
+              {subscribeBtn}
+              {prompt}
+            </div>
           </header>
           <section>
             <h3>Deck List</h3>

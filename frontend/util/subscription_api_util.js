@@ -22,7 +22,7 @@ module.exports = {
       type: "PATCH",
       data: {
         subscription: {
-          level: `${formData.level}`
+          flag: `${formData.flag}`
         }
       },
       success: success

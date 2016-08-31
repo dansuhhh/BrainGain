@@ -1,7 +1,7 @@
 .public-subject-detail-page header {
   height: 305px;
   width: 100%;
-  padding: 45px 5%;
+  padding: 45px 10%;
   background-image:
     linear-gradient(
       to right,
@@ -12,7 +12,7 @@
     height: 100px;
     float: left;
   }
-  div {
+  .public-subject-info {
     height: 100%;
     float: left;
     margin-left: 15px;
@@ -30,14 +30,36 @@
       font-weight: 200;
     }
   }
-  a {
+  .subscribe-btn-window {
     float: right;
+    width: 360px;
+    padding: 20px;
+    background-color: #C2EADB;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #92D176;
+    a {
+      width: 250px;
+      height: 55px;
+      border-radius: 3px;
+      background-color: #50C450;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .subscribe-btn-null {
+
+    }
   }
 }
 
 .public-subject-detail-page section {
   width: 100%;
-  padding: 45px 5%;
+  padding: 45px 10%;
   background-color: #FEFEFE;
   color: #333333;
   h3 {

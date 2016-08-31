@@ -6,7 +6,7 @@ class Api::SubscriptionsController < ApplicationController
 
   def create
     @subscription = Subscription.new(subscription_params)
-    @subscription.flag = false;
+    @subscription.flag = false
     @subscription.user_id = current_user.id
     if @subscription.save
       render "api/subscriptions/show"
