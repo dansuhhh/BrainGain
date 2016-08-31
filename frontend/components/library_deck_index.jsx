@@ -77,6 +77,11 @@ const LibraryDeckIndex = React.createClass({
       });
     }
 
+    let createBtn;
+    if (!this.props.subscribed){
+      createBtn = <a onClick={this.createDeck}>Create Deck</a>;
+    }
+
     return(
       <article className="subject-deck-index">
         <table className="subject-deck-table">
@@ -84,7 +89,7 @@ const LibraryDeckIndex = React.createClass({
             <tr>
               <th colSpan="4">
                 Decks
-                <a onClick={this.createDeck}>Create Deck</a>
+                {createBtn}
               </th>
             </tr>
           </thead>
