@@ -13,8 +13,13 @@ const LoginForm = React.createClass({
   },
 
   componentDidMount(){
-    SessionStore.addListener(this.handleLoggedChange);
-    ErrorStore.addListener(this.handleErrorChange);
+    this.sessionListener = SessionStore.addListener(this.handleLoggedChange);
+    this.errorListener = ErrorStore.addListener(this.handleErrorChange);
+  },
+
+  componentWillUnMount(){
+    this.sessionListener.remove();
+    this.errorListener.remove();
   },
 
   handleLoggedChange(){

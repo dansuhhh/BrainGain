@@ -12,8 +12,13 @@ const SignupForm = React.createClass({
   },
 
   componentDidMount(){
-    SessionStore.addListener(this.handleLoggedChange);
-    ErrorStore.addListener(this.handleErrorChange);
+    this.sessionListener = SessionStore.addListener(this.handleLoggedChange);
+    this.errorListener = ErrorStore.addListener(this.handleErrorChange);
+  },
+
+  componentWillUnMount(){
+    this.sessionListener.remove();
+    this.errorListener.remove();
   },
 
   handleLoggedChange(){
@@ -75,6 +80,7 @@ const SignupForm = React.createClass({
             <input type="submit" value="Sign Up"/>
           </form>
         </article>
+        <div className="darken"></div>
         <div className="cf">
           <a href="#" className="image1" />
           <a href="#" className="image2" />
