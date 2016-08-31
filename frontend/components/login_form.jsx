@@ -85,6 +85,7 @@ const LoginForm = React.createClass({
           <Link to="/users/new">Sign Up</Link>
           <a onClick={this.guestLogin}>Guest Login</a>
         </article>
+        <div className="darken"></div>
         <div className="cf">
           <a href="#" className="image1" />
           <a href="#" className="image2" />
