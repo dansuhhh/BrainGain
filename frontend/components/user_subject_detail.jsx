@@ -2,6 +2,8 @@ const React = require('react');
 const LibraryDeckIndex = require('./library_deck_index');
 const SubjectActions = require('../actions/subject_actions');
 const SubjectStore = require('../stores/subject_store');
+const SubscriptionActions = require('../actions/subscription_actions');
+const SubscriptionStore = require('../stores/subscription_store');
 const hashHistory = require('react-router').hashHistory;
 
 const UserSubjectDetail = React.createClass({
@@ -11,19 +13,23 @@ const UserSubjectDetail = React.createClass({
       return {
         title: potentialSubject.title,
         imageFile: potentialSubject.image,
-        imageUrl: potentialSubject.image_url
+        imageUrl: potentialSubject.image_url,
+        subscribed: null
       };
     } else {
       return {
         title: "",
         imageFile: null,
-        imageUrl: ""
+        imageUrl: "",
+        subscribed: null
       };
     }
   },
 
   componentDidMount() {
     this.subjectListener = SubjectStore.addListener(this.handleSubjectChange);
+    this.subscriptionListener = SubscriptionStore.addListener(this.handleSubscriptionChange);
+    SubscriptionActions.fetchAllSubscriptions();
   },
 
   componentWillReceiveProps(newProps){
@@ -32,19 +38,22 @@ const UserSubjectDetail = React.createClass({
       this.setState({
         title: potentialSubject.title,
         imageFile: potentialSubject.image,
-        imageUrl: potentialSubject.image_url
+        imageUrl: potentialSubject.image_url,
+        subscription: SubscriptionStore.ofSubject(newProps.params.subjectId)
       });
     } else {
       this.setState({
         title: "",
         imageFile: null,
-        imageUrl: ""
+        imageUrl: "",
+        subscription: SubscriptionStore.ofSubject(newProps.params.subjectId)
       });
     }
   },
 
   componentWillUnmount(){
     this.subjectListener.remove();
+    this.subscriptionListener.remove();
   },
 
   handleSubjectChange(){
@@ -52,12 +61,24 @@ const UserSubjectDetail = React.createClass({
     this.setState({
       title: subject.title,
       imageFile: subject.image,
-      imageUrl: subject.image_url
+      imageUrl: subject.image_url,
+      subscription: SubscriptionStore.ofSubject(this.props.params.subjectId)
+    });
+  },
+
+  handleSubscriptionChange(){
+    this.setState({
+      subscription: SubscriptionStore.ofSubject(this.props.params.subjectId)
     });
   },
 
   handleDelete(event){
     SubjectActions.removeSubject(this.props.params.subjectId);
+    hashHistory.push("/library");
+  },
+
+  deleteSubscription(event){
+    SubscriptionActions.updateSubscription({id: this.state.subscription.id, flag: false});
     hashHistory.push("/library");
   },
 
@@ -91,22 +112,37 @@ const UserSubjectDetail = React.createClass({
 
   render() {
     let title;
-    if (this.state.title) {
-      title = <input onChange={this.titleChange} onBlur={this.updateTitle} value={this.state.title} />;
+    let imageInput;
+    let editImage;
+    let removeBtn;
+    let flag;
+    if (this.state.subscription) {
+      if (this.state.subscription.flag){
+        title = <input onChange={this.titleChange} onBlur={this.updateTitle} value={this.state.title} disabled/>;
+        flag = true;
+        removeBtn = <a className="delete-button" onClick={this.deleteSubscription}>Unsubscribe</a>;
+      } else {
+        title = <input onChange={this.titleChange} onBlur={this.updateTitle} value={this.state.title} />;
+        imageInput = <input type="file" onChange={this.updateFile}/>;
+        editImage = <a className="thumbnail-edit"/>
+        flag = false;
+        removeBtn = <a className="delete-button" onClick={this.handleDelete}>Delete Subject</a>;
+      }
     }
+
 
     return(
       <section className="section-subject-detail">
         <article className="subject-info">
           <div className="subject-avatar">
             <img src={`${this.state.imageUrl}`}/>
-            <input type="file" onChange={this.updateFile}/>
-            <a className="thumbnail-edit"/>
+            {imageInput}
+            {editImage}
           </div>
           {title}
-          <a className="delete-button" onClick={this.handleDelete}>Delete Subject</a>
+          {removeBtn}
         </article>
-        <LibraryDeckIndex subjectId={this.props.params.subjectId}/>
+        <LibraryDeckIndex subscribed={flag} subjectId={this.props.params.subjectId}/>
       </section>
     );
   }
