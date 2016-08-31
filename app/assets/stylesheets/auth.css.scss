@@ -97,19 +97,19 @@
     animation-direction: normal;
   }
   .image1 {
-    background-image: image-url("login-background1.jpg");
+    background-image: url("http://s3.amazonaws.com/BRAINGAIN-PRO/background-pages/login-background1.jpg");
     animation-delay: 15s;
   }
   .image2 {
-    background-image: image-url("login-background2.jpg");
+    background-image: url("http://s3.amazonaws.com/BRAINGAIN-PRO/background-pages/login-background2.jpg");
     animation-delay: 10s;
   }
   .image3 {
-    background-image: image-url("login-background3.jpg");
+    background-image: url("http://s3.amazonaws.com/BRAINGAIN-PRO/background-pages/login-background3.jpg");
     animation-delay: 5s;
   }
   .image4 {
-    background-image: image-url("login-background4.jpg");
+    background-image: url("http://s3.amazonaws.com/BRAINGAIN-PRO/background-pages/login-background4.jpg");
     animation-delay: 0s;
   }
 }
