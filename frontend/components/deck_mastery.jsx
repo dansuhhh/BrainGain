@@ -95,7 +95,7 @@ const DeckMastery = React.createClass({
       });
       let masteryAmt = bar1 + (bar2 * 2) + (bar3 * 3) + (bar4 * 4) + (bar5 * 5);
       masteryPercentage = (<div className="mastery-percentage">
-        <p>{`${masteryAmt / (this.state.masteries.length * 5) * 100}%`}</p>
+        <p>{`${Math.floor(masteryAmt / (this.state.masteries.length * 5) * 100)}%`}</p>
         <p>Mastery</p>
       </div>);
     }

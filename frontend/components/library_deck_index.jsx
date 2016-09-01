@@ -57,6 +57,10 @@ const LibraryDeckIndex = React.createClass({
           editBtn = <a onClick={this.editDeck.bind(null, deck.id)}>&#9002;Edit</a>;
           deleteBtn = <a id="table-delete" onClick={this.deleteDeck.bind(null, deck.id)}>Delete</a>;
         }
+        // let deckMastery = 0;
+        // deck.masteries.forEach( mastery => {
+        //   deckMastery += mastery.level;
+        // });
         return (<tr key={deck.id}>
               <td className="table-deck-title">
                 {deck.title}
