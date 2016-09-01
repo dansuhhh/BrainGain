@@ -158,7 +158,14 @@ User.create!({ username: "danielSuhks", password: "dandan" }) # A2
       Card.create!({ question: "What instrument is Dan most comfortable with?", answer: "Electric bass", deck_id: 19})
       Card.create!({ question: "What is Dan's favorite sport?", answer: "Volleyball", deck_id: 19})
       Card.create!({ question: "What retail store does Dan like to check out?", answer: "Brookstone", deck_id: 19})
+
     Deck.create!({title: "Preferences", description: "My hobbies/interests", subject_id: 9 }) #D20
+      Card.create!({ question: "What is Dan's favorite css display property?", answer: "Flexbox", deck_id: 20})
+      Card.create!({ question: "What is Dan's favorite food?", answer: "Mac and cheese", deck_id: 20})
+      Card.create!({ question: "What is Dan's favorite animal?", answer: "Shark", deck_id: 20})
+      Card.create!({ question: "What is Dan's favorite plant?", answer: "Grass", deck_id: 20})
+      Card.create!({ question: "What is Dan's favorite season?", answer: "Fall", deck_id: 20})
+      Card.create!({ question: "How does Dan like his coffee?", answer: "With a little soymilk", deck_id: 20})
 
 
 
