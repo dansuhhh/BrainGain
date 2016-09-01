@@ -57,6 +57,21 @@
   .done-button:hover {
     background-color: #55B7E3;
   }
+  .mastery-percentage {
+    margin: 40px 0;
+    color: white;
+    text-align: center;
+    p {
+      margin: 0;
+      font-weight: 100;
+    }
+    p:nth-of-type(1) {
+      font-size: 62px;
+    }
+    p:nth-of-type(2) {
+      letter-spacing: 2px;
+    }
+  }
 
   .mastery-status {
     background-color: #444444;

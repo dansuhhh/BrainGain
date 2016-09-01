@@ -70,6 +70,7 @@ const DeckMastery = React.createClass({
     let bar4 = 0;
     let bar5 = 0;
     let count = 0;
+    let masteryPercentage;
     if (this.state.masteries){
       count = Object.keys(this.state.masteries).length;
       Object.keys(this.state.masteries).forEach( mastery_id => {
@@ -92,11 +93,17 @@ const DeckMastery = React.createClass({
             break;
         }
       });
+      let masteryAmt = bar1 + (bar2 * 2) + (bar3 * 3) + (bar4 * 4) + (bar5 * 5);
+      masteryPercentage = (<div className="mastery-percentage">
+        <p>{`${masteryAmt / (this.state.masteries.length * 5) * 100}%`}</p>
+        <p>Mastery</p>
+      </div>);
     }
     return(
       <section className="progress">
         <h3>{title}</h3>
         <Link className="done-button" to={`/library`}>Done</Link>
+        {masteryPercentage}
         <div className="mastery-status">
           <span className="mastery-num">{`${bar5}`}</span>
           <span className="mastery-num-label">
