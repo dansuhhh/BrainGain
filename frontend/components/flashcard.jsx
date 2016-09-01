@@ -55,39 +55,52 @@ const Flashcard = React.createClass({
 
   render() {
     let card;
+    let cardBorder;
     let content;
     let prompt;
+    let cardNum;
     if (this.state.currentCardIndex >= 0){
       card = this.state.currentCardIndex;
+      cardNum = `${this.state.currentCardIndex + 1} of ${this.state.cards.length}`;
       if (this.state.side === ""){
-        content = "Q: " + this.state.cards[this.state.currentCardIndex].question;
+        content = this.state.cards[this.state.currentCardIndex].question;
         prompt = (<div className="prompt">
+          <p>&nbsp; </p>
           <a onClick={this.flipCard} className="reveal">
             Reveal Answer
           </a>
         </div>);
       } else {
-        content = "A: " + this.state.cards[this.state.currentCardIndex].answer;
+        content = this.state.cards[this.state.currentCardIndex].answer;
         prompt = (<div className="prompt">
           <p>How well did you know this?</p>
           <ul className="group mastery-choices">
-            <li onClick={this.updateMastery}>1</li>
+            <li onClick={this.updateMastery}>
+              <p>1</p>
+              <p>Not at all</p>
+            </li>
             <li onClick={this.updateMastery}>2</li>
             <li onClick={this.updateMastery}>3</li>
             <li onClick={this.updateMastery}>4</li>
-            <li onClick={this.updateMastery}>5</li>
+            <li onClick={this.updateMastery}>
+              <p>5</p>
+              <p>Perfectly</p>
+            </li>
           </ul>
         </div>);
       }
     }
     return(
       <section className="flashcard-section">
+        <p className="card-num">{cardNum}</p>
         <article onClick={this.flipCard} className={`flashcard ${this.state.side}`}>
           <div className="front">
-            <p>{content}</p>
+            <p className="flashcard-side">Q.</p>
+            <p className="flashcard-content">{content}</p>
           </div>
           <div className="back">
-            <p>{content}</p>
+            <p className="flashcard-side">A.</p>
+            <p className="flashcard-content">{content}</p>
           </div>
         </article>
         {prompt}

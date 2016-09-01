@@ -47,7 +47,7 @@ const Search = React.createClass({
               className="search-list"
               type="text"
               value={this.state.search}
-              placeholder="e.g. Geometry, Pokemon, NYC"
+              placeholder="(e.g. Geometry, Pokemon, NYC, Chemistry)"
               onChange={this.handleSearchChange}/>
             <ul>
               {searchResults}

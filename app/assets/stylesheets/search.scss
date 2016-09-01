@@ -10,8 +10,10 @@
   justify-content: center;
   h1 {
     color: #FFFFFF;
-    font-weight: 200;
-    font-size: 34px;
+    font-weight: 100;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-size: 48px;
+    font-family: 'Proxima Nova Thin',sans-serif;
   }
   .search-bar {
     width: 820px;
@@ -29,6 +31,7 @@
       width: 80%;
       padding: 20px 20px;
       font-size: 32px;
+      font-weight: 300;
     }
     ul {
       position: absolute;

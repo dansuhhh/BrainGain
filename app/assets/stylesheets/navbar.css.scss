@@ -4,7 +4,7 @@
   background-color: #2F2F2F;
   border-bottom: solid 4px #FF8A47;
   padding: 5px 45px;
-  box-shadow: 0 3px 5px #CBCBCB;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
   font-size: 14px;
 }
 
@@ -46,6 +46,10 @@
   color: #55B7E3;
 }
 
+.navbar-link:focus {
+  color: white;
+}
+
 .navbar-logout {
   background-color: #29A5DC;
   color: white;
@@ -57,6 +61,7 @@
   line-height: 30px;
   margin-top: 10px;
   margin-left: 15px;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
 
 .navbar-logout:hover {

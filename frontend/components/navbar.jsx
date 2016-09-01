@@ -40,7 +40,10 @@ const Navbar = React.createClass({
         <Link to="library" className="navbar-link">
           My Library
         </Link>
-        <a href="#" className="navbar-link">FlashCards</a>
+        <a href="#" className="navbar-link">
+          <i className="fa fa-search fa" aria-hidden="true"></i>
+          &nbsp; Flashcards
+        </a>
         <a className="navbar-logout" onClick={this.handleLogOutClick}>
           Log Out
         </a>
@@ -50,7 +53,10 @@ const Navbar = React.createClass({
         return (<nav className="group main-nav-bar">
           <a href="#" className="brain-image"></a>
           <a href="#" className="logo-name">GAIN</a>
-          <a href="#" className="navbar-link">FlashCards</a>
+          <a href="#" className="navbar-link">
+            <i className="fa fa-search fa" aria-hidden="true"></i>
+            &nbsp; Flashcards
+          </a>
           <Link to="session/new" className="navbar-logout">Log In</Link>
         </nav>);
     }

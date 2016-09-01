@@ -98,7 +98,17 @@ const DeckMastery = React.createClass({
         <h3>{title}</h3>
         <Link className="done-button" to={`/library`}>Done</Link>
         <div className="mastery-status">
-          {`${bar5} cards mastered / ${Object.keys(this.state.cards).length} total cards`}
+          <span className="mastery-num">{`${bar5}`}</span>
+          <span className="mastery-num-label">
+            <p>Cards</p>
+            <p>Mastered</p>
+          </span>
+          <span className="slash">/</span>
+          <span className="mastery-num">{`${Object.keys(this.state.cards).length}`}</span>
+          <span className="mastery-num-label">
+            <p>Total</p>
+            <p>Cards</p>
+          </span>
         </div>
         <ul className="masteries">
           <li>
