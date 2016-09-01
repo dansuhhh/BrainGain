@@ -94,8 +94,12 @@ const DeckMastery = React.createClass({
         }
       });
       let masteryAmt = bar1 + (bar2 * 2) + (bar3 * 3) + (bar4 * 4) + (bar5 * 5);
+      let ratio = Math.floor(masteryAmt / (this.state.masteries.length * 5) * 100);
+      if (isNaN(ratio)){
+        ratio = 0;
+      }
       masteryPercentage = (<div className="mastery-percentage">
-        <p>{`${Math.floor(masteryAmt / (this.state.masteries.length * 5) * 100)}%`}</p>
+        <p>{`${ratio}%`}</p>
         <p>Mastery</p>
       </div>);
     }

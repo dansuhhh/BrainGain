@@ -14,7 +14,10 @@ User.create!({ username: "michaelscott", password: "dandan" }) # A1
       Card.create!({ question: "0 + 0", answer: "0", deck_id: 1})
       Card.create!({ question: "12 + 3", answer: "15", deck_id: 1})
       Card.create!({ question: "23 + 320", answer: "343", deck_id: 1})
-      Card.create!({ question: "-15 + 3", answer: "-12", deck_id: 1})
+      Card.create!({ question: "1849 + 3029", answer: "4878", deck_id: 1})
+      Card.create!({ question: "-15 + -30", answer: "-45", deck_id: 1})
+      Card.create!({ question: "-1 + 1", answer: "0", deck_id: 1})
+      Card.create!({ question: "-400 + -400", answer: "-800", deck_id: 1})
 
     Deck.create!({title: "Subtraction", description: "Take aways!", subject_id: 1}) #D2
       Card.create!({ question: "10 - 3", answer: "7", deck_id: 2})
@@ -123,6 +126,40 @@ User.create!({ username: "danielSuhks", password: "dandan" }) # A2
       Card.create!({ question: "What kind of bond involves the sharing of electrons?", answer: "Covalent bonds", deck_id: 15})
       Card.create!({ question: "What are the two strongest bonds?", answer: "Ionic and covalent", deck_id: 15})
       Card.create!({ question: "What happens to the charge of an atom after removing an electron?", answer: "It becomes more positive", deck_id: 15})
+
+  Subject.create!({ title: "The Office", author_id: 2 }) # S8
+
+    Deck.create!({title: "Characters", description: "Beloved characters", subject_id: 8}) #D16
+      Card.create!({ question: "Who is Dwight's cousin?", answer: "Mose Schrute", deck_id: 16})
+      Card.create!({ question: "Who did Michael Scott eventually marry?", answer: "Holly Flax", deck_id: 16})
+      Card.create!({ question: "Who is the NardDog?", answer: "Andy Bernard", deck_id: 16})
+      Card.create!({ question: "Who did Pam date before Jim?", answer: "Roy Anderson", deck_id: 16})
+      Card.create!({ question: "Which character owns many cats?", answer: "Angela Martin", deck_id: 16})
+      Card.create!({ question: "Which character can speak Chinese?", answer: "Creed Bratton", deck_id: 16})
+
+    Deck.create!({title: "Famous Scenes", description: "Beloved scenes", subject_id: 8}) #D17
+      Card.create!({ question: "What did Michael Scott do to Oscar to show his appreciation of homosexuality?", answer: "Kiss", deck_id: 17})
+      Card.create!({ question: "Kevin's Famous _______", answer: "Chili", deck_id: 17})
+      Card.create!({ question: "What did Creed get Jim for Christmas?", answer: "An old flannel", deck_id: 17})
+      Card.create!({ question: "The characters danced to what song for Jim/Pam's wedding?", answer: "Forever by Chris Brown", deck_id: 17})
+      Card.create!({ question: "Why does Creed have no debt?", answer: "He transfers it all to Williams Charles Schnyder", deck_id: 17})
+
+    Deck.create!({title: "Jim and Dwight", description: "Beloved pranks", subject_id: 8}) #D18
+      Card.create!({ question: "Jim puts Dwight's belongings in what?", answer: "Jello", deck_id: 18})
+      Card.create!({ question: "Where has Jim relocated Dwight's desk to?", answer: "The bathroom", deck_id: 18})
+      Card.create!({ question: "Jim has faxed Dwight as ________", answer: "Dwight's future self", deck_id: 18})
+      Card.create!({ question: "Jim conducted which famous study on Dwight involving mints?", answer: "Pavlov's classical conditioning", deck_id: 18})
+
+  Subject.create!({ title: "Daniel Suh", author_id: 2 }) # S9
+
+    Deck.create!({title: "Hobbies/Interests", description: "My hobbies/interests", subject_id: 9}) #D19
+      Card.create!({ question: "What is Dan's favorite thing to do?", answer: "Coding", deck_id: 19})
+      Card.create!({ question: "What style of dance has Dan been dancing for 5 years?", answer: "Hip-hop", deck_id: 19})
+      Card.create!({ question: "What instrument is Dan most comfortable with?", answer: "Electric bass", deck_id: 19})
+      Card.create!({ question: "What is Dan's favorite sport?", answer: "Volleyball", deck_id: 19})
+      Card.create!({ question: "What retail store does Dan like to check out?", answer: "Brookstone", deck_id: 19})
+    Deck.create!({title: "Preferences", description: "My hobbies/interests", subject_id: 9 }) #D20
+
 
 
 
