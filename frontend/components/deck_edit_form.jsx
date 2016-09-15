@@ -9,7 +9,7 @@ const DeckActions = require('../actions/deck_actions');
 
 const DeckEditForm = React.createClass({
   getInitialState() {
-      return { deck: {} , cards: {} };
+      return { deck: {} , deckTitle: "", cards: {} };
   },
 
   componentDidMount() {
@@ -27,8 +27,10 @@ const DeckEditForm = React.createClass({
   },
 
   handleDeckChange() {
+    let newDeck = DeckStore.find(parseInt(this.props.params.deckId));
     this.setState({
-      deck: DeckStore.find(parseInt(this.props.params.deckId))
+      deck: newDeck,
+      deckTitle: newDeck.title
     });
   },
 
@@ -98,14 +100,22 @@ const DeckEditForm = React.createClass({
         });
       }
     });
+    DeckActions.updateDeck({id: this.state.deck.id, title: this.state.deckTitle});
     hashHistory.push(`/library`);
+  },
+
+  titleChange(e){
+    this.setState({
+      deckTitle: e.target.value
+    });
   },
 
   render(){
     let header;
     if (this.state.deck.title){
+      let title = <input onChange={this.titleChange} value={this.state.deckTitle} />;
       header = (<h2>
-        Flashcards inside { `${this.state.deck.title}`}
+        Flashcards inside {title}
       </h2>);
     }
     let cardRows;
